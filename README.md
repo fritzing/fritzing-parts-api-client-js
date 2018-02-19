@@ -1,5 +1,7 @@
 # fritzing-parts-api-client
 
+This is a super simple api client to fetch data from the fritzing.github.io/fritzing-parts server.
+
 ## Usage
 
 install with yarn
@@ -7,7 +9,7 @@ install with yarn
 yarn add paulvollmer/fritzing-parts-api-client
 ```
 
-or use npm 
+or use npm
 ```
 npm install paulvollmer/fritzing-parts-api-client --save
 ```
