@@ -27,6 +27,15 @@ class ApiClient {
   }
 
   /**
+   * @param {String} src
+   * @return {Promise} the fetch promise
+   */
+  getCoreSvg(src) {
+    return fetch(this.url+'/svg/core/'+src)
+    .then((res) => res.text());
+  }
+
+  /**
    * @return {Promise}
    */
   getFzbs() {
