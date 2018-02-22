@@ -1,3 +1,7 @@
+'use strict';
+
+const axios = require('axios');
+
 /**
  *
  */
@@ -13,8 +17,10 @@ class ApiClient {
    * @return {Promise}
    */
   getFzps() {
-    return fetch(this.url+'/fzp')
-    .then((res) => res.json());
+    return axios.get(this.url+'/fzp', {responseType: 'json'})
+    .then((res) => {
+      return res.data;
+    });
   }
 
   /**
@@ -22,8 +28,10 @@ class ApiClient {
    * @return {Promise} the fetch promise
    */
   getFzp(src) {
-    return fetch(this.url+'/'+src)
-    .then((res) => res.text());
+    return axios.get(this.url+'/'+src, {responseType: 'xml'})
+    .then((res) => {
+      return res.data;
+    });
   }
 
   /**
@@ -31,17 +39,21 @@ class ApiClient {
    * @return {Promise} the fetch promise
    */
   getCoreSvg(src) {
-    return fetch(this.url+'/svg/core/'+src)
-    .then((res) => res.text());
+    return axios.get(this.url+'/svg/core/'+src, {responseType: 'xml'})
+    .then((res) => {
+      return res.data;
+    });
   }
 
   /**
    * @return {Promise}
    */
   getFzbs() {
-    return fetch(this.url+'/fzb')
-    .then((res) => res.json());
+    return axios.get(this.url+'/fzb', {responseType: 'json'})
+    .then((res) => {
+      return res.data;
+    });
   }
 }
 
-export default ApiClient;
+module.exports = ApiClient;
