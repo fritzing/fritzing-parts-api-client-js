@@ -3,12 +3,12 @@
 <head>
   <meta charset="utf-8">
   <base data-ice="baseUrl" href="../../">
-  <title data-ice="title">src/index.js | fzz</title>
+  <title data-ice="title">src/index.js | fritzing-parts-api-client</title>
   <link type="text/css" rel="stylesheet" href="css/style.css">
   <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
   <script src="script/prettify/prettify.js"></script>
   <script src="script/manual.js"></script>
-<meta name="description" content="fritzing fzz"><meta property="og:type" content="website"><meta property="og:url" content="https://paulvollmer.net"><meta property="og:site_name" content="fzz"><meta property="og:title" content="fzz"><meta property="og:image" content="https://github.com/paulvollmer/logo.png"><meta property="og:description" content="fritzing fzz"><meta property="og:author" content="https://github.com/paulvollmer"><meta property="twitter:card" content="summary"><meta property="twitter:title" content="fzz"><meta property="twitter:description" content="fritzing fzz"><meta property="twitter:image" content="https://github.com/paulvollmer/logo.png"></head>
+<meta name="description" content="fritzing parts api client"><meta property="og:type" content="website"><meta property="og:url" content="https://paulvollmer.net"><meta property="og:site_name" content="fritzing-parts-api-client"><meta property="og:title" content="fritzing-parts-api-client"><meta property="og:image" content="https://github.com/paulvollmer/logo.png"><meta property="og:description" content="fritzing parts api client"><meta property="og:author" content="https://github.com/paulvollmer"><meta property="twitter:card" content="summary"><meta property="twitter:title" content="fritzing-parts-api-client"><meta property="twitter:description" content="fritzing parts api client"><meta property="twitter:image" content="https://github.com/paulvollmer/logo.png"></head>
 <body class="layout-container" data-ice="rootContainer">
 
 <header>
@@ -24,7 +24,7 @@
   </span>
     <ul class="search-result"></ul>
   </div>
-<a style="position:relative; top:3px;" href="https://github.com/paulvollmer/fzz"><img width="20px" src="./image/github.png"></a></header>
+<a style="position:relative; top:3px;" href="https://github.com/paulvollmer/fritzing-parts-api-client"><img width="20px" src="./image/github.png"></a></header>
 
 <nav class="navigation" data-ice="nav"><div>
   <ul>
@@ -35,53 +35,69 @@
 </nav>
 
 <div class="content" data-ice="content"><h1 data-ice="title">src/index.js</h1>
-<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">/**
- *
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">&apos;use strict&apos;;
+
+const axios = require(&apos;axios&apos;);
+
+/**
+ * Fritzing Parts API Client
  */
 class ApiClient {
   /**
-   *
+   * Construct the ApiClient
    */
   constructor() {
     this.url = &apos;https://fritzing.github.io/fritzing-parts&apos;;
   }
 
   /**
+   * Get a list of all FZP files
    * @return {Promise}
    */
   getFzps() {
-    return fetch(this.url+&apos;/fzp&apos;)
-    .then((res) =&gt; res.json());
+    return axios.get(this.url+&apos;/fzp&apos;, {responseType: &apos;json&apos;})
+    .then((res) =&gt; {
+      return res.data;
+    });
   }
 
   /**
-   * @param {String} src
+   * Get a single FZP and response the xml as a string
+   * @param  {String} src
    * @return {Promise} the fetch promise
    */
   getFzp(src) {
-    return fetch(this.url+&apos;/&apos;+src)
-    .then((res) =&gt; res.text());
+    return axios.get(this.url+&apos;/&apos;+src, {responseType: &apos;xml&apos;})
+    .then((res) =&gt; {
+      return res.data;
+    });
   }
 
   /**
-   * @param {String} src
+   * Get a single part svg and response the svg as a string
+   * @param  {String} src
    * @return {Promise} the fetch promise
    */
   getCoreSvg(src) {
-    return fetch(this.url+&apos;/svg/core/&apos;+src)
-    .then((res) =&gt; res.text());
+    return axios.get(this.url+&apos;/svg/core/&apos;+src, {responseType: &apos;xml&apos;})
+    .then((res) =&gt; {
+      return res.data;
+    });
   }
 
   /**
+   * Get a list of all FZB files
    * @return {Promise}
    */
   getFzbs() {
-    return fetch(this.url+&apos;/fzb&apos;)
-    .then((res) =&gt; res.json());
+    return axios.get(this.url+&apos;/fzb&apos;, {responseType: &apos;json&apos;})
+    .then((res) =&gt; {
+      return res.data;
+    });
   }
 }
 
-export default ApiClient;
+module.exports = ApiClient;
 </code></pre>
 
 </div>
