@@ -3,17 +3,18 @@
 const axios = require('axios');
 
 /**
- *
+ * Fritzing Parts API Client
  */
 class ApiClient {
   /**
-   *
+   * Construct the ApiClient
    */
   constructor() {
     this.url = 'https://fritzing.github.io/fritzing-parts';
   }
 
   /**
+   * Get a list of all FZP files
    * @return {Promise}
    */
   getFzps() {
@@ -24,7 +25,8 @@ class ApiClient {
   }
 
   /**
-   * @param {String} src
+   * Get a single FZP and response the xml as a string
+   * @param  {String} src
    * @return {Promise} the fetch promise
    */
   getFzp(src) {
@@ -35,7 +37,8 @@ class ApiClient {
   }
 
   /**
-   * @param {String} src
+   * Get a single part svg and response the svg as a string
+   * @param  {String} src
    * @return {Promise} the fetch promise
    */
   getCoreSvg(src) {
@@ -46,6 +49,7 @@ class ApiClient {
   }
 
   /**
+   * Get a list of all FZB files
    * @return {Promise}
    */
   getFzbs() {
