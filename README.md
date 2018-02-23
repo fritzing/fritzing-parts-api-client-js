@@ -22,9 +22,32 @@ const apiclient = new ApiClient()
 apiclient.getFzps().then(data => {
   // do something with the data
 }).catch(err => {
-  // do something with the error
+  // do something with the error catch
 })
 ```
 
+## Development
+
+clone the repository
+```sh
+git clone git@github.com:paulvollmer/fritzing-parts-api-client.git
+```
+
+```sh
+make test
+make lint
+```
+
+if you have lint errors you can try running `make lint-fix` to fix the errors
+
+to generate the docs, run
+```sh
+make docs
+```
+if you want to open the docs after generating in your browser, run
+```sh
+make docs-open
+```
+
 ## License
-[MIT](LICENSE)
+[MIT License](LICENSE)

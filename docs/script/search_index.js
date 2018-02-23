@@ -7,8 +7,62 @@ window.esdocSearchIndex = [
   ],
   [
     "",
-    "test-file/test/index.test.js.html#lineNumber3",
-    "ApiClient",
+    "test-file/test/index.test.js.html#lineNumber45",
+    "ApiClient getCoreSvg",
+    "test"
+  ],
+  [
+    "",
+    "test-file/test/index.test.js.html#lineNumber46",
+    "ApiClient getCoreSvg Status 200",
+    "test"
+  ],
+  [
+    "",
+    "test-file/test/index.test.js.html#lineNumber57",
+    "ApiClient getCoreSvg Status 404",
+    "test"
+  ],
+  [
+    "",
+    "test-file/test/index.test.js.html#lineNumber70",
+    "ApiClient getFzbs",
+    "test"
+  ],
+  [
+    "",
+    "test-file/test/index.test.js.html#lineNumber71",
+    "ApiClient getFzbs Status 200",
+    "test"
+  ],
+  [
+    "",
+    "test-file/test/index.test.js.html#lineNumber19",
+    "ApiClient getFzp",
+    "test"
+  ],
+  [
+    "",
+    "test-file/test/index.test.js.html#lineNumber20",
+    "ApiClient getFzp Status 200",
+    "test"
+  ],
+  [
+    "",
+    "test-file/test/index.test.js.html#lineNumber32",
+    "ApiClient getFzp Status 404",
+    "test"
+  ],
+  [
+    "",
+    "test-file/test/index.test.js.html#lineNumber6",
+    "ApiClient getFzps",
+    "test"
+  ],
+  [
+    "",
+    "test-file/test/index.test.js.html#lineNumber7",
+    "ApiClient getFzps Status 200",
     "test"
   ],
   [

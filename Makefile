@@ -14,3 +14,7 @@ docs:
 docs-open: docs
 	@open docs/index.html
 .PHONY: docs docs-open
+
+clean:
+	@rm -rf coverage
+.PHONY: clean

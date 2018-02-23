@@ -567,7 +567,7 @@
     "__docId__": 48,
     "kind": "file",
     "name": "src/index.js",
-    "content": "/**\n *\n */\nclass ApiClient {\n  /**\n   *\n   */\n  constructor() {\n    this.url = 'https://fritzing.github.io/fritzing-parts';\n  }\n\n  /**\n   * @return {Promise}\n   */\n  getFzps() {\n    return fetch(this.url+'/fzp')\n    .then((res) => res.json());\n  }\n\n  /**\n   * @param {String} src\n   * @return {Promise} the fetch promise\n   */\n  getFzp(src) {\n    return fetch(this.url+'/'+src)\n    .then((res) => res.text());\n  }\n\n  /**\n   * @param {String} src\n   * @return {Promise} the fetch promise\n   */\n  getCoreSvg(src) {\n    return fetch(this.url+'/svg/core/'+src)\n    .then((res) => res.text());\n  }\n\n  /**\n   * @return {Promise}\n   */\n  getFzbs() {\n    return fetch(this.url+'/fzb')\n    .then((res) => res.json());\n  }\n}\n\nexport default ApiClient;\n",
+    "content": "'use strict';\n\nconst axios = require('axios');\n\n/**\n * Fritzing Parts API Client\n */\nclass ApiClient {\n  /**\n   * Construct the ApiClient\n   */\n  constructor() {\n    this.url = 'https://fritzing.github.io/fritzing-parts';\n  }\n\n  /**\n   * Get a list of all FZP files\n   * @return {Promise}\n   */\n  getFzps() {\n    return axios.get(this.url+'/fzp', {responseType: 'json'})\n    .then((res) => {\n      return res.data;\n    });\n  }\n\n  /**\n   * Get a single FZP and response the xml as a string\n   * @param  {String} src\n   * @return {Promise} the fetch promise\n   */\n  getFzp(src) {\n    return axios.get(this.url+'/'+src, {responseType: 'xml'})\n    .then((res) => {\n      return res.data;\n    });\n  }\n\n  /**\n   * Get a single part svg and response the svg as a string\n   * @param  {String} src\n   * @return {Promise} the fetch promise\n   */\n  getCoreSvg(src) {\n    return axios.get(this.url+'/svg/core/'+src, {responseType: 'xml'})\n    .then((res) => {\n      return res.data;\n    });\n  }\n\n  /**\n   * Get a list of all FZB files\n   * @return {Promise}\n   */\n  getFzbs() {\n    return axios.get(this.url+'/fzb', {responseType: 'json'})\n    .then((res) => {\n      return res.data;\n    });\n  }\n}\n\nmodule.exports = ApiClient;\n",
     "static": true,
     "longname": "/Users/paul/code/src/github.com/paulvollmer/fritzing-parts-api-client/src/index.js",
     "access": "public",
@@ -576,21 +576,42 @@
   },
   {
     "__docId__": 49,
+    "kind": "variable",
+    "name": "axios",
+    "memberof": "src/index.js",
+    "static": true,
+    "longname": "src/index.js~axios",
+    "access": "public",
+    "export": false,
+    "importPath": "fritzing-parts-api-client",
+    "importStyle": null,
+    "description": null,
+    "lineNumber": 3,
+    "undocument": true,
+    "type": {
+      "types": [
+        "*"
+      ]
+    },
+    "ignore": true
+  },
+  {
+    "__docId__": 50,
     "kind": "class",
     "name": "ApiClient",
     "memberof": "src/index.js",
     "static": true,
     "longname": "src/index.js~ApiClient",
     "access": "public",
-    "export": true,
+    "export": false,
     "importPath": "fritzing-parts-api-client",
-    "importStyle": "ApiClient",
-    "description": "",
-    "lineNumber": 4,
+    "importStyle": null,
+    "description": "Fritzing Parts API Client",
+    "lineNumber": 8,
     "interface": false
   },
   {
-    "__docId__": 50,
+    "__docId__": 51,
     "kind": "constructor",
     "name": "constructor",
     "memberof": "src/index.js~ApiClient",
@@ -599,11 +620,11 @@
     "static": false,
     "longname": "src/index.js~ApiClient#constructor",
     "access": "public",
-    "description": "",
-    "lineNumber": 8
+    "description": "Construct the ApiClient",
+    "lineNumber": 12
   },
   {
-    "__docId__": 51,
+    "__docId__": 52,
     "kind": "member",
     "name": "url",
     "memberof": "src/index.js~ApiClient",
@@ -611,7 +632,7 @@
     "longname": "src/index.js~ApiClient#url",
     "access": "public",
     "description": null,
-    "lineNumber": 9,
+    "lineNumber": 13,
     "undocument": true,
     "type": {
       "types": [
@@ -621,7 +642,7 @@
     "ignore": true
   },
   {
-    "__docId__": 52,
+    "__docId__": 53,
     "kind": "method",
     "name": "getFzps",
     "memberof": "src/index.js~ApiClient",
@@ -630,8 +651,8 @@
     "static": false,
     "longname": "src/index.js~ApiClient#getFzps",
     "access": "public",
-    "description": "",
-    "lineNumber": 15,
+    "description": "Get a list of all FZP files",
+    "lineNumber": 20,
     "return": {
       "nullable": null,
       "types": [
@@ -643,7 +664,7 @@
     "params": []
   },
   {
-    "__docId__": 53,
+    "__docId__": 54,
     "kind": "method",
     "name": "getFzp",
     "memberof": "src/index.js~ApiClient",
@@ -652,41 +673,8 @@
     "static": false,
     "longname": "src/index.js~ApiClient#getFzp",
     "access": "public",
-    "description": "",
-    "lineNumber": 24,
-    "params": [
-      {
-        "nullable": null,
-        "types": [
-          "String"
-        ],
-        "spread": false,
-        "optional": false,
-        "name": "src",
-        "description": ""
-      }
-    ],
-    "return": {
-      "nullable": null,
-      "types": [
-        "Promise"
-      ],
-      "spread": false,
-      "description": "the fetch promise"
-    }
-  },
-  {
-    "__docId__": 54,
-    "kind": "method",
-    "name": "getCoreSvg",
-    "memberof": "src/index.js~ApiClient",
-    "generator": false,
-    "async": false,
-    "static": false,
-    "longname": "src/index.js~ApiClient#getCoreSvg",
-    "access": "public",
-    "description": "",
-    "lineNumber": 33,
+    "description": "Get a single FZP and response the xml as a string",
+    "lineNumber": 32,
     "params": [
       {
         "nullable": null,
@@ -711,6 +699,39 @@
   {
     "__docId__": 55,
     "kind": "method",
+    "name": "getCoreSvg",
+    "memberof": "src/index.js~ApiClient",
+    "generator": false,
+    "async": false,
+    "static": false,
+    "longname": "src/index.js~ApiClient#getCoreSvg",
+    "access": "public",
+    "description": "Get a single part svg and response the svg as a string",
+    "lineNumber": 44,
+    "params": [
+      {
+        "nullable": null,
+        "types": [
+          "String"
+        ],
+        "spread": false,
+        "optional": false,
+        "name": "src",
+        "description": ""
+      }
+    ],
+    "return": {
+      "nullable": null,
+      "types": [
+        "Promise"
+      ],
+      "spread": false,
+      "description": "the fetch promise"
+    }
+  },
+  {
+    "__docId__": 56,
+    "kind": "method",
     "name": "getFzbs",
     "memberof": "src/index.js~ApiClient",
     "generator": false,
@@ -718,8 +739,8 @@
     "static": false,
     "longname": "src/index.js~ApiClient#getFzbs",
     "access": "public",
-    "description": "",
-    "lineNumber": 41,
+    "description": "Get a list of all FZB files",
+    "lineNumber": 55,
     "return": {
       "nullable": null,
       "types": [
@@ -740,17 +761,17 @@
   },
   {
     "kind": "packageJSON",
-    "content": "{\n  \"name\": \"fritzing-parts-api-client\",\n  \"version\": \"0.0.1\",\n  \"description\": \"fritzing-parts api client for frontend side\",\n  \"author\": \"paulvollmer\",\n  \"license\": \"MIT\",\n  \"main\": \"src/index.js\",\n  \"scripts\": {\n    \"lint\": \"./node_modules/.bin/eslint .\",\n    \"lint-fix\": \"./node_modules/.bin/eslint . --fix\",\n    \"pretest\": \"npm run lint\",\n    \"test\": \"./node_modules/.bin/jest\"\n  },\n  \"homepage\": \"https://github.com/paulvollmer/fritzing-parts-api-client#readme\",\n  \"repository\": {\n    \"type\": \"git\",\n    \"url\": \"git+https://github.com/paulvollmer/fritzing-parts-api-client.git\"\n  },\n  \"bugs\": {\n    \"url\": \"https://github.com/paulvollmer/fritzing-parts-api-client/issues\"\n  },\n  \"keywords\": [\n    \"fritzing\",\n    \"fritzing-parts\"\n  ],\n  \"devDependencies\": {\n    \"esdoc\": \"^1.0.4\",\n    \"esdoc-ecmascript-proposal-plugin\": \"^1.0.0\",\n    \"esdoc-standard-plugin\": \"^1.0.0\",\n    \"eslint\": \"^4.18.0\",\n    \"eslint-config-google\": \"^0.9.1\"\n  }\n}\n",
+    "content": "{\n  \"name\": \"fritzing-parts-api-client\",\n  \"version\": \"0.0.3\",\n  \"description\": \"fritzing-parts api client for frontend side\",\n  \"author\": \"paulvollmer\",\n  \"license\": \"MIT\",\n  \"main\": \"src/index.js\",\n  \"scripts\": {\n    \"pretest\": \"make lint\",\n    \"test\": \"make test\"\n  },\n  \"homepage\": \"https://github.com/paulvollmer/fritzing-parts-api-client#readme\",\n  \"repository\": {\n    \"type\": \"git\",\n    \"url\": \"git+https://github.com/paulvollmer/fritzing-parts-api-client.git\"\n  },\n  \"bugs\": {\n    \"url\": \"https://github.com/paulvollmer/fritzing-parts-api-client/issues\"\n  },\n  \"keywords\": [\n    \"fritzing\",\n    \"fritzing-parts\"\n  ],\n  \"jest\": {\n    \"verbose\": true,\n    \"collectCoverage\": true\n  },\n  \"devDependencies\": {\n    \"esdoc\": \"^1.0.4\",\n    \"esdoc-ecmascript-proposal-plugin\": \"^1.0.0\",\n    \"esdoc-standard-plugin\": \"^1.0.0\",\n    \"eslint\": \"^4.18.0\",\n    \"eslint-config-google\": \"^0.9.1\",\n    \"jest\": \"^22.4.0\"\n  },\n  \"dependencies\": {\n    \"axios\": \"^0.18.0\"\n  }\n}\n",
     "longname": "/Users/paul/code/src/github.com/paulvollmer/fritzing-parts-api-client/package.json",
     "name": "package.json",
     "static": true,
     "access": "public"
   },
   {
-    "__docId__": 56,
+    "__docId__": 57,
     "kind": "testFile",
     "name": "test/index.test.js",
-    "content": "const ApiClient = require('../src');\n\nit('ApiClient', () => {\n  let client = new ApiClient();\n\n  let fzps = [];\n  client.getFzps()\n  .then((data) => {\n    fzps = data;\n  })\n  .catch((e) => {\n    console.error(e);\n  });\n  console.log(fzps);\n});\n",
+    "content": "'use strict';\n\nconst ApiClient = require('../src');\nlet client = new ApiClient();\n\ndescribe('ApiClient getFzps', () => {\n  test('Status 200', (done) => {\n    client.getFzps()\n    .then((data) => {\n      expect(typeof data).toEqual('object');\n      done();\n    })\n    .catch((err) => {\n      done(err);\n    });\n  });\n});\n\ndescribe('ApiClient getFzp', () => {\n  test('Status 200', (done) => {\n    client.getFzp('core/teensy_3.1.fzp')\n    .then((data) => {\n      expect(typeof data).toEqual('string');\n      // console.log(data);\n      done();\n    })\n    .catch((err) => {\n      done(err);\n    });\n  });\n\n  test('Status 404', (done) => {\n    client.getFzp('not/found.fzp')\n    .then((data) => {\n      throw new Error('should be 404');\n      done();\n    })\n    .catch((err) => {\n      expect(err.message).toEqual('Request failed with status code 404');\n      done();\n    });\n  });\n});\n\ndescribe('ApiClient getCoreSvg', () => {\n  test('Status 200', (done) => {\n    client.getCoreSvg('breadboard/teensy_3.1_breadboard.svg')\n    .then((data) => {\n      expect(typeof data).toEqual('string');\n      done();\n    })\n    .catch((err) => {\n      done(err);\n    });\n  });\n\n  test('Status 404', (done) => {\n    client.getCoreSvg('not/found.svg')\n    .then((data) => {\n      throw new Error('should be 404');\n      done();\n    })\n    .catch((err) => {\n      expect(err.message).toEqual('Request failed with status code 404');\n      done();\n    });\n  });\n});\n\ndescribe('ApiClient getFzbs', () => {\n  test('Status 200', (done) => {\n    client.getFzbs()\n    .then((data) => {\n      expect(typeof data).toEqual('object');\n      done();\n    })\n    .catch((err) => {\n      done(err);\n    });\n  });\n});\n",
     "static": true,
     "longname": "/Users/paul/code/src/github.com/paulvollmer/fritzing-parts-api-client/test/index.test.js",
     "access": null,
@@ -758,16 +779,133 @@
     "lineNumber": 1
   },
   {
-    "__docId__": 57,
+    "__docId__": 58,
     "kind": "test",
-    "name": "it0",
+    "name": "describe0",
     "testId": 0,
     "memberof": "test/index.test.js",
     "testDepth": 0,
     "static": true,
-    "longname": "test/index.test.js~it0",
+    "longname": "test/index.test.js~describe0",
     "access": null,
-    "description": "ApiClient",
-    "lineNumber": 3
+    "description": "ApiClient getFzps",
+    "lineNumber": 6
+  },
+  {
+    "__docId__": 59,
+    "kind": "test",
+    "name": "test1",
+    "testId": 1,
+    "memberof": "test/index.test.js~describe0",
+    "testDepth": 1,
+    "static": true,
+    "longname": "test/index.test.js~describe0.test1",
+    "access": null,
+    "description": "Status 200",
+    "lineNumber": 7
+  },
+  {
+    "__docId__": 60,
+    "kind": "test",
+    "name": "describe2",
+    "testId": 2,
+    "memberof": "test/index.test.js",
+    "testDepth": 0,
+    "static": true,
+    "longname": "test/index.test.js~describe2",
+    "access": null,
+    "description": "ApiClient getFzp",
+    "lineNumber": 19
+  },
+  {
+    "__docId__": 61,
+    "kind": "test",
+    "name": "test3",
+    "testId": 3,
+    "memberof": "test/index.test.js~describe2",
+    "testDepth": 1,
+    "static": true,
+    "longname": "test/index.test.js~describe2.test3",
+    "access": null,
+    "description": "Status 200",
+    "lineNumber": 20
+  },
+  {
+    "__docId__": 62,
+    "kind": "test",
+    "name": "test4",
+    "testId": 4,
+    "memberof": "test/index.test.js~describe2",
+    "testDepth": 1,
+    "static": true,
+    "longname": "test/index.test.js~describe2.test4",
+    "access": null,
+    "description": "Status 404",
+    "lineNumber": 32
+  },
+  {
+    "__docId__": 63,
+    "kind": "test",
+    "name": "describe5",
+    "testId": 5,
+    "memberof": "test/index.test.js",
+    "testDepth": 0,
+    "static": true,
+    "longname": "test/index.test.js~describe5",
+    "access": null,
+    "description": "ApiClient getCoreSvg",
+    "lineNumber": 45
+  },
+  {
+    "__docId__": 64,
+    "kind": "test",
+    "name": "test6",
+    "testId": 6,
+    "memberof": "test/index.test.js~describe5",
+    "testDepth": 1,
+    "static": true,
+    "longname": "test/index.test.js~describe5.test6",
+    "access": null,
+    "description": "Status 200",
+    "lineNumber": 46
+  },
+  {
+    "__docId__": 65,
+    "kind": "test",
+    "name": "test7",
+    "testId": 7,
+    "memberof": "test/index.test.js~describe5",
+    "testDepth": 1,
+    "static": true,
+    "longname": "test/index.test.js~describe5.test7",
+    "access": null,
+    "description": "Status 404",
+    "lineNumber": 57
+  },
+  {
+    "__docId__": 66,
+    "kind": "test",
+    "name": "describe8",
+    "testId": 8,
+    "memberof": "test/index.test.js",
+    "testDepth": 0,
+    "static": true,
+    "longname": "test/index.test.js~describe8",
+    "access": null,
+    "description": "ApiClient getFzbs",
+    "lineNumber": 70
+  },
+  {
+    "__docId__": 67,
+    "kind": "test",
+    "name": "test9",
+    "testId": 9,
+    "memberof": "test/index.test.js~describe8",
+    "testDepth": 1,
+    "static": true,
+    "longname": "test/index.test.js~describe8.test9",
+    "access": null,
+    "description": "Status 200",
+    "lineNumber": 71
   }
 ]

@@ -17,9 +17,9 @@
         "typeInference": {"enable": true},
         "brand": {
           "logo": "",
-          "title": "fzz",
-          "description": "fritzing fzz",
-          "repository": "https://github.com/paulvollmer/fzz",
+          "title": "fritzing-parts-api-client",
+          "description": "fritzing parts api client",
+          "repository": "https://github.com/paulvollmer/fritzing-parts-api-client",
           "site": "https://paulvollmer.net",
           "author": "https://github.com/paulvollmer",
           "image": "https://github.com/paulvollmer/logo.png"
