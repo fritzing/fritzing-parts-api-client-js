@@ -4,7 +4,7 @@
   "description": "fritzing-parts api client for frontend side",
   "author": "paulvollmer",
   "license": "MIT",
-  "main": "src/index.js",
+  "main": "lib/index.js",
   "scripts": {
     "pretest": "make lint",
     "test": "make test"
