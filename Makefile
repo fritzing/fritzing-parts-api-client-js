@@ -9,6 +9,10 @@ test:
 	@$(BIN)/jest
 .PHONY: all lint lint-fix test
 
+build:
+	@$(BIN)/babel -o lib/index.js src/index.js
+.PHONY: build
+
 docs:
 	@$(BIN)/esdoc
 docs-open: docs
