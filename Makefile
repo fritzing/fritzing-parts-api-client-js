@@ -1,6 +1,6 @@
 BIN = ./node_modules/.bin
 
-all: lint test
+all: lint test build
 lint:
 	@$(BIN)/eslint .
 lint-fix:
