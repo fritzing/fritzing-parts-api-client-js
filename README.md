@@ -40,6 +40,11 @@ make lint
 
 if you have lint errors you can try running `make lint-fix` to fix the errors
 
+to build an es5 compatible version run
+```sh
+make build
+```
+
 to generate the docs, run
 ```sh
 make docs
