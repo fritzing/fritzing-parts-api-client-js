@@ -23,6 +23,18 @@ class ApiClient {
       return res.data;
     });
   }
+  getCoreFzps() {
+    return axios.get(this.url+'/fzp/core', {responseType: 'json'})
+    .then((res) => {
+      return res.data;
+    });
+  }
+  getObsoleteFzps() {
+    return axios.get(this.url+'/fzp/obsolete', {responseType: 'json'})
+    .then((res) => {
+      return res.data;
+    });
+  }
 
   /**
    * Get a single FZP and response the xml as a string
