@@ -1,18 +1,18 @@
-BIN = ./node_modules/.bin
+BIN = node_modules\.bin
 
 all: lint test
 lint:
-	@$(BIN)/eslint .
+	@$(BIN)\eslint .
 lint-fix:
-	@$(BIN)/eslint . --fix
+	@$(BIN)\eslint . --fix
 test:
-	@$(BIN)/jest
+	@$(BIN)\jest
 .PHONY: all lint lint-fix test
 
 docs:
-	@$(BIN)/esdoc
+	@$(BIN)\esdoc
 docs-open: docs
-	@open docs/index.html
+	@open docs\index.html
 .PHONY: docs docs-open
 
 clean:
