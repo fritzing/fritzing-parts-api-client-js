@@ -29,12 +29,28 @@ class ApiClient {
    * @param  {String} src
    * @return {Promise} the fetch promise
    */
-  getFzp(src) {
-    return axios.get(this.url+'/'+src, {responseType: 'xml'})
+   getFzp(src) {
+     return axios.get(this.url+'/'+src, {responseType: 'xml'})
+     .then((res) => {
+       return res.data;
+     });
+   }
+   // get an fzp from the core parts library
+  getCoreFzp(src) {
+    return axios.get(this.url+'/core/'+src, {responseType: 'xml'})
     .then((res) => {
       return res.data;
     });
   }
+
+  // get an fzp from the obsolete parts
+  getObsoleteFzp(src) {
+    return axios.get(this.url+'/obsolete/'+src, {responseType: 'xml'})
+    .then((res) => {
+      return res.data;
+    });
+  }
+
 
   /**
    * Get a single part svg and response the svg as a string
@@ -47,6 +63,18 @@ class ApiClient {
       return res.data;
     });
   }
+  /**
+   * Get a single part svg and response the svg as a string
+   * @param  {String} src
+   * @return {Promise} the fetch promise
+   */
+  getObsoleteSvg(src) {
+    return axios.get(this.url+'/svg/obsolete/'+src, {responseType: 'xml'})
+    .then((res) => {
+      return res.data;
+    });
+  }
+
 
   /**
    * Get a list of all FZB files
