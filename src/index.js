@@ -69,6 +69,13 @@ class ApiClient {
    * @param  {String} src
    * @return {Promise} the fetch promise
    */
+   getSvg(src) {
+     return axios.get(this.url+'/svg/'+src, {responseType: 'xml'})
+     .then((res) => {
+       return res.data;
+     });
+   }
+
   getCoreSvg(src) {
     return axios.get(this.url+'/svg/core/'+src, {responseType: 'xml'})
     .then((res) => {
