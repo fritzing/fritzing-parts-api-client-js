@@ -1,4 +1,4 @@
-# fritzing-parts-api-client
+# fritzing-parts-api-client [![](https://paulvollmer.net/fritzing-parts-api-client/badge.svg)](https://paulvollmer.net/fritzing-parts-api-client/)
 
 This is a super simple api client to fetch data from the fritzing.github.io/fritzing-parts server.
 
