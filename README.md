@@ -49,24 +49,9 @@ if you want to open the docs after generating in your browser, run
 make docs-open
 ```
 
-## Api Short Docs:
+## Api Docs
 
-```
-getFzps()
-// retun all fritzing part filenames
-getFzp(src)
-// get a specific fritzing part
-getCoreFzp(src)
-// get only core part fzp
-getObsoleteFzp(src)
-// get only obsolete parts
-getCoreSvg(src)
-// get core svgs
-getObsoleteSvg(src)
-// get svgs from obsolete parts
-getFzbs()
-// get the fritzing library files
+[Api-documentation](https://paulvollmer.net/fritzing-parts-api-client/class/src/index.js~ApiClient.html)
 
-```
 ## License
 [MIT License](LICENSE)
