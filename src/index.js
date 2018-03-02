@@ -23,13 +23,21 @@ class ApiClient {
       return res.data;
     });
   }
-  getCoreFzps() {
+  /**
+   * Get a list of all Core-FZP files
+   * @return {Promise}
+   */
+  getFzpsCore() {
     return axios.get(this.url+'/fzp/core', {responseType: 'json'})
     .then((res) => {
       return res.data;
     });
   }
-  getObsoleteFzps() {
+  /**
+   * Get a list of all Obsolete-FZP files. for old sketches only!
+   * @return {Promise}
+   */
+  getFzpsObsolete() {
     return axios.get(this.url+'/fzp/obsolete', {responseType: 'json'})
     .then((res) => {
       return res.data;
@@ -47,16 +55,24 @@ class ApiClient {
        return res.data;
      });
    }
-   // get an fzp from the core parts library
-  getCoreFzp(src) {
+
+   /**
+    * Get a single part fzp from the core parts
+    * @param  {String} src
+    * @return {Promise} the fetch promise returns xml
+    */
+  getFzpCore(src) {
     return axios.get(this.url+'/core/'+src, {responseType: 'xml'})
     .then((res) => {
       return res.data;
     });
   }
-
-  // get an fzp from the obsolete parts
-  getObsoleteFzp(src) {
+  /**
+   * Get a single part fzp from the obsolete parts, this is for old sketches only!
+   * @param  {String} src
+   * @return {Promise} the fetch promise returns xml
+   */
+  getFzpObsolete(src) {
     return axios.get(this.url+'/obsolete/'+src, {responseType: 'xml'})
     .then((res) => {
       return res.data;
@@ -75,25 +91,28 @@ class ApiClient {
        return res.data;
      });
    }
-
-  getCoreSvg(src) {
+   /**
+    * Get a single part svg from the core parts as svg-string
+    * @param  {String} src
+    * @return {Promise} the fetch promise returns xml
+    */
+  getSvgCore(src) {
     return axios.get(this.url+'/svg/core/'+src, {responseType: 'xml'})
     .then((res) => {
       return res.data;
     });
   }
   /**
-   * Get a single part svg and response the svg as a string
+   * Get a single part svg from the obsolete svgs, this is for old-sketches only! the response is a svg-string
    * @param  {String} src
    * @return {Promise} the fetch promise
    */
-  getObsoleteSvg(src) {
+  getSvgObsolete(src) {
     return axios.get(this.url+'/svg/obsolete/'+src, {responseType: 'xml'})
     .then((res) => {
       return res.data;
     });
   }
-
 
   /**
    * Get a list of all FZB files
