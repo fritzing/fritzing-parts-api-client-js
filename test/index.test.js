@@ -75,7 +75,6 @@ describe('ApiClient getFzpCore', () => {
     client.getFzpCore('teensy_3.1.fzp')
     .then((data) => {
       expect(typeof data).toEqual('string');
-      // console.log(data);
       done();
     })
     .catch((err) => {
@@ -101,7 +100,6 @@ describe('ApiClient getFzpObsolete', () => {
     client.getFzpObsolete('Arduino_Leonardo_Rev3.fzp')
     .then((data) => {
       expect(typeof data).toEqual('string');
-      // console.log(data);
       done();
     })
     .catch((err) => {
