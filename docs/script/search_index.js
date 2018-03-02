@@ -7,62 +7,158 @@ window.esdocSearchIndex = [
   ],
   [
     "",
-    "test-file/test/index.test.js.html#lineNumber45",
-    "ApiClient getCoreSvg",
-    "test"
-  ],
-  [
-    "",
-    "test-file/test/index.test.js.html#lineNumber46",
-    "ApiClient getCoreSvg Status 200",
-    "test"
-  ],
-  [
-    "",
-    "test-file/test/index.test.js.html#lineNumber57",
-    "ApiClient getCoreSvg Status 404",
-    "test"
-  ],
-  [
-    "",
-    "test-file/test/index.test.js.html#lineNumber70",
+    "test-file/test/index.test.js.html#lineNumber201",
     "ApiClient getFzbs",
     "test"
   ],
   [
     "",
-    "test-file/test/index.test.js.html#lineNumber71",
+    "test-file/test/index.test.js.html#lineNumber202",
     "ApiClient getFzbs Status 200",
     "test"
   ],
   [
     "",
-    "test-file/test/index.test.js.html#lineNumber19",
+    "test-file/test/index.test.js.html#lineNumber48",
     "ApiClient getFzp",
     "test"
   ],
   [
     "",
-    "test-file/test/index.test.js.html#lineNumber20",
+    "test-file/test/index.test.js.html#lineNumber49",
     "ApiClient getFzp Status 200",
     "test"
   ],
   [
     "",
-    "test-file/test/index.test.js.html#lineNumber32",
+    "test-file/test/index.test.js.html#lineNumber60",
     "ApiClient getFzp Status 404",
     "test"
   ],
   [
     "",
-    "test-file/test/index.test.js.html#lineNumber6",
-    "ApiClient getFzps",
+    "test-file/test/index.test.js.html#lineNumber73",
+    "ApiClient getFzpCore",
+    "test"
+  ],
+  [
+    "",
+    "test-file/test/index.test.js.html#lineNumber74",
+    "ApiClient getFzpCore Status 200",
+    "test"
+  ],
+  [
+    "",
+    "test-file/test/index.test.js.html#lineNumber85",
+    "ApiClient getFzpCore Status 404",
+    "test"
+  ],
+  [
+    "",
+    "test-file/test/index.test.js.html#lineNumber98",
+    "ApiClient getFzpObsolete",
+    "test"
+  ],
+  [
+    "",
+    "test-file/test/index.test.js.html#lineNumber99",
+    "ApiClient getFzpObsolete Status 200",
+    "test"
+  ],
+  [
+    "",
+    "test-file/test/index.test.js.html#lineNumber110",
+    "ApiClient getFzpObsolete Status 404",
     "test"
   ],
   [
     "",
     "test-file/test/index.test.js.html#lineNumber7",
+    "ApiClient getFzps",
+    "test"
+  ],
+  [
+    "",
+    "test-file/test/index.test.js.html#lineNumber8",
     "ApiClient getFzps Status 200",
+    "test"
+  ],
+  [
+    "",
+    "test-file/test/index.test.js.html#lineNumber20",
+    "ApiClient getFzpsCore",
+    "test"
+  ],
+  [
+    "",
+    "test-file/test/index.test.js.html#lineNumber21",
+    "ApiClient getFzpsCore Status 200",
+    "test"
+  ],
+  [
+    "",
+    "test-file/test/index.test.js.html#lineNumber33",
+    "ApiClient getFzpsObsolete",
+    "test"
+  ],
+  [
+    "",
+    "test-file/test/index.test.js.html#lineNumber34",
+    "ApiClient getFzpsObsolete Status 200",
+    "test"
+  ],
+  [
+    "",
+    "test-file/test/index.test.js.html#lineNumber124",
+    "ApiClient getSvg",
+    "test"
+  ],
+  [
+    "",
+    "test-file/test/index.test.js.html#lineNumber125",
+    "ApiClient getSvg Status 200",
+    "test"
+  ],
+  [
+    "",
+    "test-file/test/index.test.js.html#lineNumber136",
+    "ApiClient getSvg Status 404",
+    "test"
+  ],
+  [
+    "",
+    "test-file/test/index.test.js.html#lineNumber149",
+    "ApiClient getSvgCore",
+    "test"
+  ],
+  [
+    "",
+    "test-file/test/index.test.js.html#lineNumber150",
+    "ApiClient getSvgCore Status 200",
+    "test"
+  ],
+  [
+    "",
+    "test-file/test/index.test.js.html#lineNumber161",
+    "ApiClient getSvgCore Status 404",
+    "test"
+  ],
+  [
+    "",
+    "test-file/test/index.test.js.html#lineNumber174",
+    "ApiClient getSvgObsolete",
+    "test"
+  ],
+  [
+    "",
+    "test-file/test/index.test.js.html#lineNumber175",
+    "ApiClient getSvgObsolete Status 200",
+    "test"
+  ],
+  [
+    "",
+    "test-file/test/index.test.js.html#lineNumber186",
+    "ApiClient getSvgObsolete Status 404",
     "test"
   ],
   [
@@ -360,12 +456,6 @@ window.esdocSearchIndex = [
     "method"
   ],
   [
-    "src/index.js~apiclient#getcoresvg",
-    "class/src/index.js~ApiClient.html#instance-method-getCoreSvg",
-    "src/index.js~ApiClient#getCoreSvg",
-    "method"
-  ],
-  [
     "src/index.js~apiclient#getfzbs",
     "class/src/index.js~ApiClient.html#instance-method-getFzbs",
     "src/index.js~ApiClient#getFzbs",
@@ -378,9 +468,51 @@ window.esdocSearchIndex = [
     "method"
   ],
   [
+    "src/index.js~apiclient#getfzpcore",
+    "class/src/index.js~ApiClient.html#instance-method-getFzpCore",
+    "src/index.js~ApiClient#getFzpCore",
+    "method"
+  ],
+  [
+    "src/index.js~apiclient#getfzpobsolete",
+    "class/src/index.js~ApiClient.html#instance-method-getFzpObsolete",
+    "src/index.js~ApiClient#getFzpObsolete",
+    "method"
+  ],
+  [
     "src/index.js~apiclient#getfzps",
     "class/src/index.js~ApiClient.html#instance-method-getFzps",
     "src/index.js~ApiClient#getFzps",
+    "method"
+  ],
+  [
+    "src/index.js~apiclient#getfzpscore",
+    "class/src/index.js~ApiClient.html#instance-method-getFzpsCore",
+    "src/index.js~ApiClient#getFzpsCore",
+    "method"
+  ],
+  [
+    "src/index.js~apiclient#getfzpsobsolete",
+    "class/src/index.js~ApiClient.html#instance-method-getFzpsObsolete",
+    "src/index.js~ApiClient#getFzpsObsolete",
+    "method"
+  ],
+  [
+    "src/index.js~apiclient#getsvg",
+    "class/src/index.js~ApiClient.html#instance-method-getSvg",
+    "src/index.js~ApiClient#getSvg",
+    "method"
+  ],
+  [
+    "src/index.js~apiclient#getsvgcore",
+    "class/src/index.js~ApiClient.html#instance-method-getSvgCore",
+    "src/index.js~ApiClient#getSvgCore",
+    "method"
+  ],
+  [
+    "src/index.js~apiclient#getsvgobsolete",
+    "class/src/index.js~ApiClient.html#instance-method-getSvgObsolete",
+    "src/index.js~ApiClient#getSvgObsolete",
     "method"
   ],
   [
