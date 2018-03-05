@@ -1,10 +1,10 @@
 {
   "name": "fritzing-parts-api-client",
-  "version": "0.0.3",
+  "version": "0.1.0",
   "description": "fritzing-parts api client for frontend side",
   "author": "paulvollmer",
   "license": "MIT",
-  "main": "src/index.js",
+  "main": "lib/index.js",
   "scripts": {
     "pretest": "make lint",
     "test": "make test"
@@ -26,6 +26,8 @@
     "collectCoverage": true
   },
   "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
     "esdoc": "^1.0.4",
     "esdoc-ecmascript-proposal-plugin": "^1.0.0",
     "esdoc-standard-plugin": "^1.0.0",
