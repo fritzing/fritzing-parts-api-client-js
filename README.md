@@ -1,4 +1,4 @@
-# fritzing-parts-api-client
+# fritzing-parts-api-client [![](https://paulvollmer.net/fritzing-parts-api-client/badge.svg)](https://paulvollmer.net/fritzing-parts-api-client/)
 
 This is a super simple api client to fetch data from the fritzing.github.io/fritzing-parts server.
 
@@ -39,6 +39,11 @@ make lint
 ```
 
 if you have lint errors you can try running `make lint-fix` to fix the errors
+
+to build an es5 compatible version run
+```sh
+make build
+```
 
 to generate the docs, run
 ```sh
