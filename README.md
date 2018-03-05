@@ -1,8 +1,8 @@
 # fritzing-parts-api-client [![](https://paulvollmer.net/fritzing-parts-api-client/badge.svg)](https://paulvollmer.net/fritzing-parts-api-client/)
 
-This is a super simple api client to fetch data from the fritzing.github.io/fritzing-parts server.
+This is a super simple [nodejs](https://nodejs.org) Api-Client. It connects to the [fritzing-parts-server](fritzing.github.io/fritzing-parts) and fetches [fritzing](http://fritzing.org/home/) parts.  
 
-## Usage
+## Install
 
 install with yarn
 ```sh
@@ -14,6 +14,7 @@ or use npm
 npm install paulvollmer/fritzing-parts-api-client --save
 ```
 
+## Usage
 initialize an api client and fetch /fzps endpoint
 ```javascript
 import ApiClient from 'fritzing-parts-api-client'
