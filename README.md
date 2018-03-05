@@ -26,6 +26,11 @@ apiclient.getFzps().then(data => {
 })
 ```
 
+## Api Documentation
+
+The complete Api Documentation can be found here:
+[Api Documentation](https://paulvollmer.net/fritzing-parts-api-client/class/src/index.js~ApiClient.html)
+
 ## Development
 
 clone the repository
