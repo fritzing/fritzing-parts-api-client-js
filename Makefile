@@ -1,4 +1,4 @@
-ifndef SYSTEMROOT
+ifeq ($(OS),Windows_NT)
 		BIN=node_modules\.bin
 		PATHSEP2=\\
 		RM=del -r
