@@ -26,6 +26,10 @@ docs:
 docs-open: docs
 	@open docs/index.html
 .PHONY: docs docs-open
+docs-commit: docs
+	git add docs
+	git commit -m "Updated docs artifact"
+.PHONY: docs docs-open docs-commit
 
 clean:
 	@rm -rf coverage
