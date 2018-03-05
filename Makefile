@@ -1,4 +1,4 @@
-ifndef SYSTEMROOT
+ifeq ($(OS),Windows_NT)
 		BIN=node_modules\.bin
 		PATHSEP2=\\
 		RM=del -r
@@ -20,6 +20,10 @@ endif
 PATHSEP=$(strip $(PATHSEP2))
 
 all: lint-fix test build docs
+
+variables:
+	@echo $(SYSTEMROOT)
+	@echo $(OS)
 
 lint:
 	$(L)$(BIN)$(PATHSEP)eslint .
