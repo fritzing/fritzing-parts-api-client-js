@@ -1,4 +1,4 @@
-BIN = ./node_modules/.bin
+BIN = \node_modules/.bin
 
 all: lint test build
 
