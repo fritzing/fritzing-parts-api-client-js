@@ -1,5 +1,5 @@
 {
-  "name": "fritzing-parts-api-client",
+  "name": "fritzing-parts-api-client-js",
   "version": "0.1.0",
   "description": "fritzing-parts api client for frontend side",
   "contributors": [
@@ -22,13 +22,13 @@
     "precommit": "make lint",
     "prepush": "make lint"
   },
-  "homepage": "https://github.com/fritzing/fritzing-parts-api-client#readme",
+  "homepage": "https://github.com/fritzing/fritzing-parts-api-client-js#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/fritzing/fritzing-parts-api-client.git"
+    "url": "git+https://github.com/fritzing/fritzing-parts-api-client-js.git"
   },
   "bugs": {
-    "url": "https://github.com/fritzing/fritzing-parts-api-client/issues"
+    "url": "https://github.com/fritzing/fritzing-parts-api-client-js/issues"
   },
   "keywords": [
     "fritzing",
