@@ -1,4 +1,4 @@
-# fritzing-parts-api-client [![](https://paulvollmer.net/fritzing-parts-api-client/badge.svg)](https://paulvollmer.net/fritzing-parts-api-client/)
+# fritzing-parts-api-client-js [![](https://fritzing.github.io/fritzing-parts-api-client-js/badge.svg)](https://fritzing.github.io/fritzing-parts-api-client-js/)
 
 This is a super simple [nodejs](https://nodejs.org) Api-Client. It connects to the [fritzing-parts-server](fritzing.github.io/fritzing-parts) and fetches [fritzing](http://fritzing.org/home/) parts.  
 
@@ -13,18 +13,18 @@ This is a super simple [nodejs](https://nodejs.org) Api-Client. It connects to t
 
 install with yarn
 ```sh
-yarn add paulvollmer/fritzing-parts-api-client
+yarn add fritzing/fritzing-parts-api-client-js
 ```
 
 or use npm
 ```sh
-npm install paulvollmer/fritzing-parts-api-client --save
+npm install fritzing/fritzing-parts-api-client-js --save
 ```
 
 ## Usage
 initialize an api client and fetch /fzps endpoint
 ```javascript
-import ApiClient from 'fritzing-parts-api-client'
+import ApiClient from 'fritzing-parts-api-client-js'
 
 const apiclient = new ApiClient()
 apiclient.getFzps().then(data => {
@@ -37,13 +37,13 @@ apiclient.getFzps().then(data => {
 ## Api Documentation
 
 The complete Api Documentation can be found here:
-[Api Docs](https://paulvollmer.net/fritzing-parts-api-client/class/src/index.js~ApiClient.html)
+[Api Docs](https://fritzing.github.io/fritzing-parts-api-client-js/)
 
 ## Development
 
 clone the repository
 ```sh
-git clone git@github.com:paulvollmer/fritzing-parts-api-client.git
+git clone git@github.com:fritzing/fritzing-parts-api-client-js.git
 ```
 
 ```sh
