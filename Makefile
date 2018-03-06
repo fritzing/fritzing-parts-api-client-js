@@ -1,30 +1,53 @@
-BIN = ./node_modules/.bin
+ifeq ($(OS),Windows_NT)
+		BIN=node_modules\.bin
+		PATHSEP2=\\
+		RM=del -r
+else
+		BIN=./node_modules/.bin
+		PATHSEP2=/
+		RM=rm -rf
+endif
 
-all: lint test build docs
+# make <target> LOG=yes
+ifeq "$(LOG)" ""
+    LOG=no
+endif
+
+ifeq "$(LOG)" "no"
+    L=@
+endif
+
+PATHSEP=$(strip $(PATHSEP2))
+
+all: lint-fix test build docs
+
+variables:
+	@echo $(SYSTEMROOT)
+	@echo $(OS)
 
 lint:
-	@$(BIN)/eslint .
+	$(L)$(BIN)$(PATHSEP)eslint .
 lint-fix:
-	@$(BIN)/eslint . --fix
+	$(L)$(BIN)$(PATHSEP)eslint . --fix
 .PHONY: lint lint-fix
 
 test:
-	@$(BIN)/jest
+	$(L)$(BIN)$(PATHSEP)jest
 open-coverage: test
-	@open coverage/lcov-report/index.html
+	$(L)open coverage$(PATHSEP)lcov-report$(PATHSEP)index.html
 .PHONY: test open-coverage
 
 build:
-	@$(BIN)/babel -o lib/index.js src/index.js
+	$(L)$(BIN)$(PATHSEP)babel -o lib$(PATHSEP)index.js src$(PATHSEP)index.js
 build-commit: build
 	git add lib
 	git commit -m "Updated lib artifact"
 .PHONY: build build-commit
 
 docs:
-	@$(BIN)/esdoc
+	$(L)$(BIN)$(PATHSEP)esdoc
 docs-open: docs
-	@open docs/index.html
+	$(L)open docs$(PATHSEP)index.html
 .PHONY: docs docs-open
 docs-commit: docs
 	git add docs
@@ -32,5 +55,5 @@ docs-commit: docs
 .PHONY: docs docs-open docs-commit
 
 clean:
-	@rm -rf coverage
+	$(L)$(RM) coverage
 .PHONY: clean
