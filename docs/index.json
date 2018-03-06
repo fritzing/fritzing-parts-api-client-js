@@ -583,7 +583,7 @@
     "longname": "src/index.js~axios",
     "access": "public",
     "export": false,
-    "importPath": "fritzing-parts-api-client",
+    "importPath": "fritzing-parts-api-client/src/index.js",
     "importStyle": null,
     "description": null,
     "lineNumber": 3,
@@ -604,7 +604,7 @@
     "longname": "src/index.js~ApiClient",
     "access": "public",
     "export": false,
-    "importPath": "fritzing-parts-api-client",
+    "importPath": "fritzing-parts-api-client/src/index.js",
     "importStyle": null,
     "description": "Fritzing Parts API Client",
     "lineNumber": 8,
@@ -929,8 +929,8 @@
   },
   {
     "kind": "index",
-    "content": "# fritzing-parts-api-client\r\n\r\nThis is a super simple api client to fetch data from the fritzing.github.io/fritzing-parts server.\r\n\r\n## Usage\r\n\r\ninstall with yarn\r\n```sh\r\nyarn add paulvollmer/fritzing-parts-api-client\r\n```\r\n\r\nor use npm\r\n```sh\r\nnpm install paulvollmer/fritzing-parts-api-client --save\r\n```\r\n\r\ninitialize an api client and fetch /fzps endpoint\r\n```javascript\r\nimport ApiClient from 'fritzing-parts-api-client'\r\n\r\nconst apiclient = new ApiClient()\r\napiclient.getFzps().then(data => {\r\n  // do something with the data\r\n}).catch(err => {\r\n  // do something with the error catch\r\n})\r\n```\r\n\r\n## Development\r\n\r\nclone the repository\r\n```sh\r\ngit clone git@github.com:paulvollmer/fritzing-parts-api-client.git\r\n```\r\n\r\n```sh\r\nmake test\r\nmake lint\r\n```\r\n\r\nif you have lint errors you can try running `make lint-fix` to fix the errors\r\n\r\nto generate the docs, run\r\n```sh\r\nmake docs\r\n```\r\nif you want to open the docs after generating in your browser, run\r\n```sh\r\nmake docs-open\r\n```\n\n## Api Short Docs:\n\n```\ngetFzps()\n// retun all fritzing part filenames\ngetFzp(src)\n// get a specific fritzing part\ngetCoreFzp(src)\n// get only core part fzp\ngetObsoleteFzp(src)\n// get only obsolete parts\ngetCoreSvg(src)\n// get core svgs\ngetObsoleteSvg(src)\n// get svgs from obsolete parts\ngetFzbs()\n// get the fritzing library files\n\n```\r\n## License\r\n[MIT License](LICENSE)\r\n",
-    "longname": "C:\\Users\\joev.noise\\Documents\\AAA\\code\\src\\github.com\\paulvollmer\\fritzing-parts-api-client\\README.md",
+    "content": "# fritzing-parts-api-client [![](https://paulvollmer.net/fritzing-parts-api-client/badge.svg)](https://paulvollmer.net/fritzing-parts-api-client/)\n\nThis is a super simple api client to fetch data from the fritzing.github.io/fritzing-parts server.\n\n## Usage\n\ninstall with yarn\n```sh\nyarn add paulvollmer/fritzing-parts-api-client\n```\n\nor use npm\n```sh\nnpm install paulvollmer/fritzing-parts-api-client --save\n```\n\ninitialize an api client and fetch /fzps endpoint\n```javascript\nimport ApiClient from 'fritzing-parts-api-client'\n\nconst apiclient = new ApiClient()\napiclient.getFzps().then(data => {\n  // do something with the data\n}).catch(err => {\n  // do something with the error catch\n})\n```\n\n## Development\n\nclone the repository\n```sh\ngit clone git@github.com:paulvollmer/fritzing-parts-api-client.git\n```\n\n```sh\nmake test\nmake lint\n```\n\nif you have lint errors you can try running `make lint-fix` to fix the errors\n\nto build an es5 compatible version run\n```sh\nmake build\n```\n\nto generate the docs, run\n```sh\nmake docs\n```\nif you want to open the docs after generating in your browser, run\n```sh\nmake docs-open\n```\n\n## License\n[MIT License](LICENSE)\n",
+    "longname": "/Users/paul/code/src/github.com/paulvollmer/fritzing-parts-api-client/README.md",
     "name": "./README.md",
     "static": true,
     "access": "public"

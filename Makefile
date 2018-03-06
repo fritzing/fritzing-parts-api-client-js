@@ -1,6 +1,6 @@
 BIN = ./node_modules/.bin
 
-all: lint test build
+all: lint test build docs
 
 lint:
 	@$(BIN)/eslint .
@@ -27,6 +27,10 @@ docs:
 docs-open: docs
 	@open docs/index.html
 .PHONY: docs docs-open
+docs-commit: docs
+	git add docs
+	git commit -m "Updated docs artifact"
+.PHONY: docs docs-open docs-commit
 
 clean:
 	@rm -rf coverage

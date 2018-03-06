@@ -1,8 +1,8 @@
 window.esdocSearchIndex = [
   [
-    "fritzing-parts-api-client~apiclient",
+    "fritzing-parts-api-client/src/index.js~apiclient",
     "class/src/index.js~ApiClient.html",
-    "<span>ApiClient</span> <span class=\"search-result-import-path\">fritzing-parts-api-client</span>",
+    "<span>ApiClient</span> <span class=\"search-result-import-path\">fritzing-parts-api-client/src/index.js</span>",
     "class"
   ],
   [

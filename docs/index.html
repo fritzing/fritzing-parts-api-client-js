@@ -34,7 +34,7 @@
 </div>
 </nav>
 
-<div class="content" data-ice="content"><div data-ice="index" class="github-markdown"><h1 id="fritzing-parts-api-client">fritzing-parts-api-client</h1><p>This is a super simple api client to fetch data from the fritzing.github.io/fritzing-parts server.</p>
+<div class="content" data-ice="content"><div data-ice="index" class="github-markdown"><h1 id="fritzing-parts-api-client--a-href--https---paulvollmer-net-fritzing-parts-api-client----img-src--https---paulvollmer-net-fritzing-parts-api-client-badge-svg--alt------a-">fritzing-parts-api-client <a href="https://paulvollmer.net/fritzing-parts-api-client/"><img src="https://paulvollmer.net/fritzing-parts-api-client/badge.svg" alt=""></a></h1><p>This is a super simple api client to fetch data from the fritzing.github.io/fritzing-parts server.</p>
 <h2 id="usage">Usage</h2><p>install with yarn</p>
 <pre><code class="lang-sh"><code class="source-code prettyprint">yarn add paulvollmer/fritzing-parts-api-client</code>
 </code></pre>
@@ -58,6 +58,10 @@ apiclient.getFzps().then(data =&gt; {
 make lint</code>
 </code></pre>
 <p>if you have lint errors you can try running <code>make lint-fix</code> to fix the errors</p>
+<p>to build an es5 compatible version run</p>
+<pre><code class="lang-sh"><code class="source-code prettyprint">make build</code>
+</code></pre>
+
 <p>to generate the docs, run</p>
 <pre><code class="lang-sh"><code class="source-code prettyprint">make docs</code>
 </code></pre>
