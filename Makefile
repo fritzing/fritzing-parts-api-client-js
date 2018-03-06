@@ -1,6 +1,6 @@
 BIN = ./node_modules/.bin
 
-all: lint test build
+all: lint test build docs
 
 lint:
 	@$(BIN)/eslint .
