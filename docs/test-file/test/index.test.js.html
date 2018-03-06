@@ -40,6 +40,7 @@
 const ApiClient = require(&apos;../src&apos;);
 let client = new ApiClient();
 
+// test for the lists of fritzing parts
 describe(&apos;ApiClient getFzps&apos;, () =&gt; {
   test(&apos;Status 200&apos;, (done) =&gt; {
     client.getFzps()
@@ -53,12 +54,39 @@ describe(&apos;ApiClient getFzps&apos;, () =&gt; {
   });
 });
 
+describe(&apos;ApiClient getFzpsCore&apos;, () =&gt; {
+  test(&apos;Status 200&apos;, (done) =&gt; {
+    client.getFzpsCore()
+    .then((data) =&gt; {
+      expect(typeof data).toEqual(&apos;object&apos;);
+      done();
+    })
+    .catch((err) =&gt; {
+      done(err);
+    });
+  });
+});
+
+describe(&apos;ApiClient getFzpsObsolete&apos;, () =&gt; {
+  test(&apos;Status 200&apos;, (done) =&gt; {
+    client.getFzpsObsolete()
+    .then((data) =&gt; {
+      expect(typeof data).toEqual(&apos;object&apos;);
+      done();
+    })
+    .catch((err) =&gt; {
+      done(err);
+    });
+  });
+});
+
+
+// test for the fritzing parts api routes
 describe(&apos;ApiClient getFzp&apos;, () =&gt; {
   test(&apos;Status 200&apos;, (done) =&gt; {
     client.getFzp(&apos;core/teensy_3.1.fzp&apos;)
     .then((data) =&gt; {
       expect(typeof data).toEqual(&apos;string&apos;);
-      // console.log(data);
       done();
     })
     .catch((err) =&gt; {
@@ -79,9 +107,9 @@ describe(&apos;ApiClient getFzp&apos;, () =&gt; {
   });
 });
 
-describe(&apos;ApiClient getCoreSvg&apos;, () =&gt; {
+describe(&apos;ApiClient getFzpCore&apos;, () =&gt; {
   test(&apos;Status 200&apos;, (done) =&gt; {
-    client.getCoreSvg(&apos;breadboard/teensy_3.1_breadboard.svg&apos;)
+    client.getFzpCore(&apos;teensy_3.1.fzp&apos;)
     .then((data) =&gt; {
       expect(typeof data).toEqual(&apos;string&apos;);
       done();
@@ -92,7 +120,7 @@ describe(&apos;ApiClient getCoreSvg&apos;, () =&gt; {
   });
 
   test(&apos;Status 404&apos;, (done) =&gt; {
-    client.getCoreSvg(&apos;not/found.svg&apos;)
+    client.getFzpCore(&apos;not/found.fzp&apos;)
     .then((data) =&gt; {
       throw new Error(&apos;should be 404&apos;);
       done();
@@ -104,6 +132,109 @@ describe(&apos;ApiClient getCoreSvg&apos;, () =&gt; {
   });
 });
 
+describe(&apos;ApiClient getFzpObsolete&apos;, () =&gt; {
+  test(&apos;Status 200&apos;, (done) =&gt; {
+    client.getFzpObsolete(&apos;Arduino_Leonardo_Rev3.fzp&apos;)
+    .then((data) =&gt; {
+      expect(typeof data).toEqual(&apos;string&apos;);
+      done();
+    })
+    .catch((err) =&gt; {
+      done(err);
+    });
+  });
+
+  test(&apos;Status 404&apos;, (done) =&gt; {
+    client.getFzpObsolete(&apos;not/found.fzp&apos;)
+    .then((data) =&gt; {
+      throw new Error(&apos;should be 404&apos;);
+      done();
+    })
+    .catch((err) =&gt; {
+      expect(err.message).toEqual(&apos;Request failed with status code 404&apos;);
+      done();
+    });
+  });
+});
+
+// test for the fritzing parts svg api routes
+describe(&apos;ApiClient getSvg&apos;, () =&gt; {
+  test(&apos;Status 200&apos;, (done) =&gt; {
+    client.getSvg(&apos;core/breadboard/teensy_3.1_breadboard.svg&apos;)
+    .then((data) =&gt; {
+      expect(typeof data).toEqual(&apos;string&apos;);
+      done();
+    })
+    .catch((err) =&gt; {
+      done(err);
+    });
+  });
+
+  test(&apos;Status 404&apos;, (done) =&gt; {
+    client.getSvg(&apos;not/found.svg&apos;)
+    .then((data) =&gt; {
+      throw new Error(&apos;should be 404&apos;);
+      done();
+    })
+    .catch((err) =&gt; {
+      expect(err.message).toEqual(&apos;Request failed with status code 404&apos;);
+      done();
+    });
+  });
+});
+
+describe(&apos;ApiClient getSvgCore&apos;, () =&gt; {
+  test(&apos;Status 200&apos;, (done) =&gt; {
+    client.getSvgCore(&apos;breadboard/teensy_3.1_breadboard.svg&apos;)
+    .then((data) =&gt; {
+      expect(typeof data).toEqual(&apos;string&apos;);
+      done();
+    })
+    .catch((err) =&gt; {
+      done(err);
+    });
+  });
+
+  test(&apos;Status 404&apos;, (done) =&gt; {
+    client.getSvgCore(&apos;not/found.svg&apos;)
+    .then((data) =&gt; {
+      throw new Error(&apos;should be 404&apos;);
+      done();
+    })
+    .catch((err) =&gt; {
+      expect(err.message).toEqual(&apos;Request failed with status code 404&apos;);
+      done();
+    });
+  });
+});
+
+describe(&apos;ApiClient getSvgObsolete&apos;, () =&gt; {
+  test(&apos;Status 200&apos;, (done) =&gt; {
+    client.getSvgObsolete(&apos;breadboard/Arduino_Fio.svg&apos;)
+    .then((data) =&gt; {
+      expect(typeof data).toEqual(&apos;string&apos;);
+      done();
+    })
+    .catch((err) =&gt; {
+      done(err);
+    });
+  });
+
+  test(&apos;Status 404&apos;, (done) =&gt; {
+    client.getSvgObsolete(&apos;not/found.svg&apos;)
+    .then((data) =&gt; {
+      throw new Error(&apos;should be 404&apos;);
+      done();
+    })
+    .catch((err) =&gt; {
+      expect(err.message).toEqual(&apos;Request failed with status code 404&apos;);
+      done();
+    });
+  });
+});
+
+
+// test for the fritzing parts binary api routes
 describe(&apos;ApiClient getFzbs&apos;, () =&gt; {
   test(&apos;Status 200&apos;, (done) =&gt; {
     client.getFzbs()

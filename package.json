@@ -12,10 +12,10 @@
   "license": "MIT",
   "main": "lib/index.js",
   "scripts": {
-    "pretest": "make lint-fix",
+    "pretest": "make lint",
     "test": "make test",
-    "precommit": "make lint-fix",
-    "prepush": "make lint-fix"
+    "precommit": "make lint",
+    "prepush": "make lint"
   },
   "homepage": "https://github.com/paulvollmer/fritzing-parts-api-client#readme",
   "repository": {
