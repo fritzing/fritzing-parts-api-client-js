@@ -21,7 +21,6 @@ build-commit: build
 	git commit -m "Updated lib artifact"
 .PHONY: build build-commit
 
-
 docs:
 	@$(BIN)/esdoc
 docs-open: docs
