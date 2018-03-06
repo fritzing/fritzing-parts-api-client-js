@@ -60,26 +60,92 @@ class ApiClient {
       return res.data;
     });
   }
-
   /**
-   * Get a single FZP and response the xml as a string
-   * @param  {String} src
-   * @return {Promise} the fetch promise
+   * Get a list of all Core-FZP files
+   * @return {Promise}
    */
-  getFzp(src) {
-    return axios.get(this.url+&apos;/&apos;+src, {responseType: &apos;xml&apos;})
+  getFzpsCore() {
+    return axios.get(this.url+&apos;/fzp/core&apos;, {responseType: &apos;json&apos;})
+    .then((res) =&gt; {
+      return res.data;
+    });
+  }
+  /**
+   * Get a list of all Obsolete-FZP files. for old sketches only!
+   * @return {Promise}
+   */
+  getFzpsObsolete() {
+    return axios.get(this.url+&apos;/fzp/obsolete&apos;, {responseType: &apos;json&apos;})
     .then((res) =&gt; {
       return res.data;
     });
   }
 
   /**
+   * Get a single FZP and response the xml as a string
+   * @param  {String} src
+   * @return {Promise} the fetch promise
+   */
+   getFzp(src) {
+     return axios.get(this.url+&apos;/&apos;+src, {responseType: &apos;xml&apos;})
+     .then((res) =&gt; {
+       return res.data;
+     });
+   }
+
+   /**
+    * Get a single part fzp from the core parts
+    * @param  {String} src
+    * @return {Promise} the fetch promise returns xml
+    */
+  getFzpCore(src) {
+    return axios.get(this.url+&apos;/core/&apos;+src, {responseType: &apos;xml&apos;})
+    .then((res) =&gt; {
+      return res.data;
+    });
+  }
+  /**
+   * Get a single part fzp from the obsolete parts, this is for old sketches only!
+   * @param  {String} src
+   * @return {Promise} the fetch promise returns xml
+   */
+  getFzpObsolete(src) {
+    return axios.get(this.url+&apos;/obsolete/&apos;+src, {responseType: &apos;xml&apos;})
+    .then((res) =&gt; {
+      return res.data;
+    });
+  }
+
+
+  /**
    * Get a single part svg and response the svg as a string
    * @param  {String} src
    * @return {Promise} the fetch promise
    */
-  getCoreSvg(src) {
+   getSvg(src) {
+     return axios.get(this.url+&apos;/svg/&apos;+src, {responseType: &apos;xml&apos;})
+     .then((res) =&gt; {
+       return res.data;
+     });
+   }
+   /**
+    * Get a single part svg from the core parts as svg-string
+    * @param  {String} src
+    * @return {Promise} the fetch promise returns xml
+    */
+  getSvgCore(src) {
     return axios.get(this.url+&apos;/svg/core/&apos;+src, {responseType: &apos;xml&apos;})
+    .then((res) =&gt; {
+      return res.data;
+    });
+  }
+  /**
+   * Get a single part svg from the obsolete svgs, this is for old-sketches only! the response is a svg-string
+   * @param  {String} src
+   * @return {Promise} the fetch promise
+   */
+  getSvgObsolete(src) {
+    return axios.get(this.url+&apos;/svg/obsolete/&apos;+src, {responseType: &apos;xml&apos;})
     .then((res) =&gt; {
       return res.data;
     });

@@ -61,13 +61,28 @@ make lint</code>
 <p>to build an es5 compatible version run</p>
 <pre><code class="lang-sh"><code class="source-code prettyprint">make build</code>
 </code></pre>
+
 <p>to generate the docs, run</p>
 <pre><code class="lang-sh"><code class="source-code prettyprint">make docs</code>
 </code></pre>
 <p>if you want to open the docs after generating in your browser, run</p>
 <pre><code class="lang-sh"><code class="source-code prettyprint">make docs-open</code>
 </code></pre>
-<h2 id="license">License</h2><p><a href="LICENSE">MIT License</a></p>
+<h2 id="api-short-docs-">Api Short Docs:</h2><pre><code><code class="source-code prettyprint">getFzps()
+// retun all fritzing part filenames
+getFzp(src)
+// get a specific fritzing part
+getCoreFzp(src)
+// get only core part fzp
+getObsoleteFzp(src)
+// get only obsolete parts
+getCoreSvg(src)
+// get core svgs
+getObsoleteSvg(src)
+// get svgs from obsolete parts
+getFzbs()
+// get the fritzing library files</code>
+</code></pre><h2 id="license">License</h2><p><a href="LICENSE">MIT License</a></p>
 </div>
 </div>
 
