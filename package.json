@@ -4,9 +4,14 @@
   "description": "fritzing-parts api client for frontend side",
   "contributors": [
     {
-      "name" : "Paul Vollmer",
-      "email" : "code@paulvollmer.net",
-      "url" : "https://paulvollmer.net"
+      "name": "paulvollmer",
+      "email": "code@paulvollmer.net",
+      "url": "https://paulvollmer.net"
+    },
+    {
+      "name": "el-j",
+      "email": "info@fabianalthaus.de",
+      "url": "https://fabianalthaus.de"
     }
   ],
   "license": "MIT",
@@ -17,17 +22,18 @@
     "precommit": "make lint",
     "prepush": "make lint"
   },
-  "homepage": "https://github.com/paulvollmer/fritzing-parts-api-client#readme",
+  "homepage": "https://github.com/fritzing/fritzing-parts-api-client#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/paulvollmer/fritzing-parts-api-client.git"
+    "url": "git+https://github.com/fritzing/fritzing-parts-api-client.git"
   },
   "bugs": {
-    "url": "https://github.com/paulvollmer/fritzing-parts-api-client/issues"
+    "url": "https://github.com/fritzing/fritzing-parts-api-client/issues"
   },
   "keywords": [
     "fritzing",
-    "fritzing-parts"
+    "fritzing-parts",
+    "api-client"
   ],
   "jest": {
     "verbose": true,
