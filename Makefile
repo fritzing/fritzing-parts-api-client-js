@@ -42,20 +42,19 @@ open-coverage: test
 
 build:
 	$(L)$(BIN)$(PATHSEP)babel -o lib$(PATHSEP)index.js src$(PATHSEP)index.js
-build-commit: build
-	git add lib
-	git commit -m "Updated lib artifact"
-.PHONY: build build-commit
+.PHONY: build
 
 docs:
 	$(L)$(BIN)$(PATHSEP)esdoc
 docs-open: docs
 	$(L)open docs$(PATHSEP)index.html
 .PHONY: docs docs-open
-docs-commit: docs
+
+release-commit: build docs
+	git add lib
 	git add docs
-	git commit -m "Updated docs artifact"
-.PHONY: docs docs-open docs-commit
+	git commit -m "Updated build artifacts (lib and docs)"
+.PHONY: release-commit
 
 clean:
 	$(L)$(RM) coverage
