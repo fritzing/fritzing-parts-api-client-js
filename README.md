@@ -2,6 +2,13 @@
 
 This is a super simple [nodejs](https://nodejs.org) Api-Client. It connects to the [fritzing-parts-server](fritzing.github.io/fritzing-parts) and fetches [fritzing](http://fritzing.org/home/) parts.  
 
+## File Structure
+
+- `docs` generated esdoc artifact
+- `lib` generated babel artifact
+- `src` the main sourcecode
+- `test` jest test code
+
 ## Install
 
 install with yarn
