@@ -23,10 +23,10 @@ all: lint-fix test build docs
 
 vars:
 	@echo $(OS)
-  @echo $(LOG)
-  @echo $(BIN)
-  @echo $(PATHSEP)
-  @echo $(RM)
+	@echo $(LOG)
+	@echo $(BIN)
+	@echo $(PATHSEP)
+	@echo $(RM)
 
 lint:
 	$(L)$(BIN)$(PATHSEP)eslint .
