@@ -30,7 +30,7 @@ apiclient.getFzps().then(data => {
 ## Api Documentation
 
 The complete Api Documentation can be found here:
-[Api Documentation](https://paulvollmer.net/fritzing-parts-api-client/class/src/index.js~ApiClient.html)
+[Api Docs](https://paulvollmer.net/fritzing-parts-api-client/class/src/index.js~ApiClient.html)
 
 ## Development
 
@@ -60,9 +60,6 @@ if you want to open the docs after generating in your browser, run
 make docs-open
 ```
 
-## Api Docs
-
-[Api-documentation](https://paulvollmer.net/fritzing-parts-api-client/class/src/index.js~ApiClient.html)
 
 ## License
 [MIT License](LICENSE)
