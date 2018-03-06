@@ -34,14 +34,14 @@
 </div>
 </nav>
 
-<div class="content" data-ice="content"><div data-ice="index" class="github-markdown"><h1 id="fritzing-parts-api-client--a-href--https---paulvollmer-net-fritzing-parts-api-client----img-src--https---paulvollmer-net-fritzing-parts-api-client-badge-svg--alt------a-">fritzing-parts-api-client <a href="https://paulvollmer.net/fritzing-parts-api-client/"><img src="https://paulvollmer.net/fritzing-parts-api-client/badge.svg" alt=""></a></h1><p>This is a super simple api client to fetch data from the fritzing.github.io/fritzing-parts server.</p>
-<h2 id="usage">Usage</h2><p>install with yarn</p>
+<div class="content" data-ice="content"><div data-ice="index" class="github-markdown"><h1 id="fritzing-parts-api-client--a-href--https---paulvollmer-net-fritzing-parts-api-client----img-src--https---paulvollmer-net-fritzing-parts-api-client-badge-svg--alt------a-">fritzing-parts-api-client <a href="https://paulvollmer.net/fritzing-parts-api-client/"><img src="https://paulvollmer.net/fritzing-parts-api-client/badge.svg" alt=""></a></h1><p>This is a super simple <a href="https://nodejs.org">nodejs</a> Api-Client. It connects to the <a href="fritzing.github.io/fritzing-parts">fritzing-parts-server</a> and fetches <a href="http://fritzing.org/home/">fritzing</a> parts.  </p>
+<h2 id="install">Install</h2><p>install with yarn</p>
 <pre><code class="lang-sh"><code class="source-code prettyprint">yarn add paulvollmer/fritzing-parts-api-client</code>
 </code></pre>
 <p>or use npm</p>
 <pre><code class="lang-sh"><code class="source-code prettyprint">npm install paulvollmer/fritzing-parts-api-client --save</code>
 </code></pre>
-<p>initialize an api client and fetch /fzps endpoint</p>
+<h2 id="usage">Usage</h2><p>initialize an api client and fetch /fzps endpoint</p>
 <pre><code class="lang-javascript"><code class="source-code prettyprint">import ApiClient from &apos;fritzing-parts-api-client&apos;
 
 const apiclient = new ApiClient()
@@ -51,6 +51,8 @@ apiclient.getFzps().then(data =&gt; {
   // do something with the error catch
 })</code>
 </code></pre>
+<h2 id="api-documentation">Api Documentation</h2><p>The complete Api Documentation can be found here:
+<a href="https://paulvollmer.net/fritzing-parts-api-client/class/src/index.js~ApiClient.html">Api Docs</a></p>
 <h2 id="development">Development</h2><p>clone the repository</p>
 <pre><code class="lang-sh"><code class="source-code prettyprint">git clone git@github.com:paulvollmer/fritzing-parts-api-client.git</code>
 </code></pre>
@@ -61,28 +63,13 @@ make lint</code>
 <p>to build an es5 compatible version run</p>
 <pre><code class="lang-sh"><code class="source-code prettyprint">make build</code>
 </code></pre>
-
 <p>to generate the docs, run</p>
 <pre><code class="lang-sh"><code class="source-code prettyprint">make docs</code>
 </code></pre>
 <p>if you want to open the docs after generating in your browser, run</p>
 <pre><code class="lang-sh"><code class="source-code prettyprint">make docs-open</code>
 </code></pre>
-<h2 id="api-short-docs-">Api Short Docs:</h2><pre><code><code class="source-code prettyprint">getFzps()
-// retun all fritzing part filenames
-getFzp(src)
-// get a specific fritzing part
-getCoreFzp(src)
-// get only core part fzp
-getObsoleteFzp(src)
-// get only obsolete parts
-getCoreSvg(src)
-// get core svgs
-getObsoleteSvg(src)
-// get svgs from obsolete parts
-getFzbs()
-// get the fritzing library files</code>
-</code></pre><h2 id="license">License</h2><p><a href="LICENSE">MIT License</a></p>
+<h2 id="license">License</h2><p><a href="LICENSE">MIT License</a></p>
 </div>
 </div>
 
