@@ -2,11 +2,32 @@
 
 const axios = require('axios');
 
+/**
+ * The base url of the fritzing parts api
+ *
+ * @example
+ * const {FritzingPartsAPI} = require('fritzing-parts-api-client-js')
+ *
+ * console.log(FritzingPartsAPI)
+ *
+ * @type {String}
+ */
 const FritzingPartsAPI = 'https://fritzing.github.io/fritzing-parts';
-const FritzingPartsAPISVG = FritzingPartsAPI+'/svg';
 
 /**
  * Fritzing Parts API Client
+ *
+ * @example
+ * const {ApiClient} = require('fritzing-parts-api-client-js')
+ *
+ * let client = new ApiClient()
+ * client.getFzps()
+ * .then((fzpz) => {
+ *   console.log(fzps)
+ * })
+ * .catch((err) => {
+ *   console.error(err)
+ * })
  */
 class ApiClient {
   /**
@@ -22,7 +43,7 @@ class ApiClient {
    * @return {Promise}
    */
   getFzps() {
-    return axios.get(this.url+'/fzp', {responseType: 'json'})
+    return axios.get(`${this.url}/fzp`, {responseType: 'json'})
     .then((res) => {
       return res.data;
     });
@@ -33,7 +54,7 @@ class ApiClient {
    * @return {Promise}
    */
   getFzpsCore() {
-    return axios.get(this.url+'/fzp/core', {responseType: 'json'})
+    return axios.get(`${this.url}/fzp/core`, {responseType: 'json'})
     .then((res) => {
       return res.data;
     });
@@ -44,7 +65,7 @@ class ApiClient {
    * @return {Promise}
    */
   getFzpsObsolete() {
-    return axios.get(this.url+'/fzp/obsolete', {responseType: 'json'})
+    return axios.get(`${this.url}/fzp/obsolete`, {responseType: 'json'})
     .then((res) => {
       return res.data;
     });
@@ -56,7 +77,7 @@ class ApiClient {
    * @return {Promise} the fetch promise
    */
    getFzp(src) {
-     return axios.get(this.url+'/'+src, {responseType: 'xml'})
+     return axios.get(`${this.url}/${src}`, {responseType: 'xml'})
      .then((res) => {
        return res.data;
      });
@@ -68,7 +89,7 @@ class ApiClient {
     * @return {Promise} the fetch promise returns xml
     */
   getFzpCore(src) {
-    return axios.get(this.url+'/core/'+src, {responseType: 'xml'})
+    return axios.get(`${this.url}/core/${src}`, {responseType: 'xml'})
     .then((res) => {
       return res.data;
     });
@@ -80,7 +101,7 @@ class ApiClient {
    * @return {Promise} the fetch promise returns xml
    */
   getFzpObsolete(src) {
-    return axios.get(this.url+'/obsolete/'+src, {responseType: 'xml'})
+    return axios.get(`${this.url}/obsolete/${src}`, {responseType: 'xml'})
     .then((res) => {
       return res.data;
     });
@@ -92,7 +113,7 @@ class ApiClient {
    * @return {Promise} the fetch promise
    */
    getSvg(src) {
-     return axios.get(this.url+'/svg/'+src, {responseType: 'xml'})
+     return axios.get(`${this.url}/svg/${src}`, {responseType: 'xml'})
      .then((res) => {
        return res.data;
      });
@@ -104,7 +125,7 @@ class ApiClient {
     * @return {Promise} the fetch promise returns xml
     */
   getSvgCore(src) {
-    return axios.get(this.url+'/svg/core/'+src, {responseType: 'xml'})
+    return axios.get(`${this.url}/svg/core/${src}`, {responseType: 'xml'})
     .then((res) => {
       return res.data;
     });
@@ -116,7 +137,7 @@ class ApiClient {
    * @return {Promise} the fetch promise
    */
   getSvgObsolete(src) {
-    return axios.get(this.url+'/svg/obsolete/'+src, {responseType: 'xml'})
+    return axios.get(`${this.url}/svg/obsolete/${src}`, {responseType: 'xml'})
     .then((res) => {
       return res.data;
     });
@@ -127,7 +148,7 @@ class ApiClient {
    * @return {Promise}
    */
   getFzbs() {
-    return axios.get(this.url+'/fzb', {responseType: 'json'})
+    return axios.get(`${this.url}/fzb`, {responseType: 'json'})
     .then((res) => {
       return res.data;
     });
@@ -137,5 +158,4 @@ class ApiClient {
 module.exports = {
   ApiClient,
   FritzingPartsAPI,
-  FritzingPartsAPISVG,
 };

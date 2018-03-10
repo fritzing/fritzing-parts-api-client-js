@@ -24,13 +24,15 @@ npm install fritzing/fritzing-parts-api-client-js --save
 ## Usage
 initialize an api client and fetch /fzps endpoint
 ```javascript
-import ApiClient from 'fritzing-parts-api-client-js'
+import {ApiClient} from 'fritzing-parts-api-client-js'
 
-const apiclient = new ApiClient()
-apiclient.getFzps().then(data => {
-  // do something with the data
-}).catch(err => {
-  // do something with the error catch
+const client = new ApiClient()
+client.getFzps()
+.then((fzpz) => {
+  console.log(fzps)
+})
+.catch((err) => {
+  console.error(err)
 })
 ```
 
