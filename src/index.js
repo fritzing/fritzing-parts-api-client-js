@@ -2,15 +2,19 @@
 
 const axios = require('axios');
 
+const FritzingPartsAPI = 'https://fritzing.github.io/fritzing-parts';
+const FritzingPartsAPISVG = FritzingPartsAPI+'/svg';
+
 /**
  * Fritzing Parts API Client
  */
 class ApiClient {
   /**
    * Construct the ApiClient
+   * @param {String} url
    */
-  constructor() {
-    this.url = 'https://fritzing.github.io/fritzing-parts';
+  constructor(url) {
+    this.url = url || FritzingPartsAPI;
   }
 
   /**
@@ -23,6 +27,7 @@ class ApiClient {
       return res.data;
     });
   }
+
   /**
    * Get a list of all Core-FZP files
    * @return {Promise}
@@ -33,6 +38,7 @@ class ApiClient {
       return res.data;
     });
   }
+
   /**
    * Get a list of all Obsolete-FZP files. for old sketches only!
    * @return {Promise}
@@ -67,6 +73,7 @@ class ApiClient {
       return res.data;
     });
   }
+
   /**
    * Get a single part fzp from the obsolete parts, this is for old sketches only!
    * @param  {String} src
@@ -79,7 +86,6 @@ class ApiClient {
     });
   }
 
-
   /**
    * Get a single part svg and response the svg as a string
    * @param  {String} src
@@ -91,6 +97,7 @@ class ApiClient {
        return res.data;
      });
    }
+
    /**
     * Get a single part svg from the core parts as svg-string
     * @param  {String} src
@@ -102,6 +109,7 @@ class ApiClient {
       return res.data;
     });
   }
+
   /**
    * Get a single part svg from the obsolete svgs, this is for old-sketches only! the response is a svg-string
    * @param  {String} src
@@ -126,4 +134,8 @@ class ApiClient {
   }
 }
 
-module.exports = ApiClient;
+module.exports = {
+  ApiClient,
+  FritzingPartsAPI,
+  FritzingPartsAPISVG,
+};

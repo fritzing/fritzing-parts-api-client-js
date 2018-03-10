@@ -1,6 +1,6 @@
 'use strict';
 
-const ApiClient = require('../src');
+const {ApiClient} = require('../src');
 let client = new ApiClient();
 
 // test for the lists of fritzing parts
