@@ -17,12 +17,12 @@
         "typeInference": {"enable": true},
         "brand": {
           "logo": "",
-          "title": "fritzing-parts-api-client",
-          "description": "fritzing parts api client",
-          "repository": "https://github.com/paulvollmer/fritzing-parts-api-client",
-          "site": "https://paulvollmer.net",
-          "author": "https://github.com/paulvollmer",
-          "image": "https://github.com/paulvollmer/logo.png"
+          "title": "fritzing-parts-api-client-js",
+          "description": "fritzing parts javascript api client",
+          "repository": "https://github.com/fritzing/fritzing-parts-api-client-js",
+          "site": "https://fritzing.org",
+          "author": "https://github.com/fritzing",
+          "image": ""
         },
         "test": {
           "source": "./test/",
@@ -35,6 +35,7 @@
     {
       "name": "esdoc-ecmascript-proposal-plugin",
       "option": {
+        "all": true,
         "classProperties": true,
         "objectRestSpread": true,
         "doExpressions": true,
