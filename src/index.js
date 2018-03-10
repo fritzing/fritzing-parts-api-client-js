@@ -3,14 +3,39 @@
 const axios = require('axios');
 
 /**
+ * The base url of the fritzing parts api
+ *
+ * @example
+ * const {FritzingPartsAPI} = require('fritzing-parts-api-client-js')
+ *
+ * console.log(FritzingPartsAPI)
+ *
+ * @type {String}
+ */
+const FritzingPartsAPI = 'https://fritzing.github.io/fritzing-parts';
+
+/**
  * Fritzing Parts API Client
+ *
+ * @example
+ * const {ApiClient} = require('fritzing-parts-api-client-js')
+ *
+ * let client = new ApiClient()
+ * client.getFzps()
+ * .then((fzpz) => {
+ *   console.log(fzps)
+ * })
+ * .catch((err) => {
+ *   console.error(err)
+ * })
  */
 class ApiClient {
   /**
    * Construct the ApiClient
+   * @param {String} url
    */
-  constructor() {
-    this.url = 'https://fritzing.github.io/fritzing-parts';
+  constructor(url) {
+    this.url = url || FritzingPartsAPI;
   }
 
   /**
@@ -18,27 +43,29 @@ class ApiClient {
    * @return {Promise}
    */
   getFzps() {
-    return axios.get(this.url+'/fzp', {responseType: 'json'})
+    return axios.get(`${this.url}/fzp`, {responseType: 'json'})
     .then((res) => {
       return res.data;
     });
   }
+
   /**
    * Get a list of all Core-FZP files
    * @return {Promise}
    */
   getFzpsCore() {
-    return axios.get(this.url+'/fzp/core', {responseType: 'json'})
+    return axios.get(`${this.url}/fzp/core`, {responseType: 'json'})
     .then((res) => {
       return res.data;
     });
   }
+
   /**
    * Get a list of all Obsolete-FZP files. for old sketches only!
    * @return {Promise}
    */
   getFzpsObsolete() {
-    return axios.get(this.url+'/fzp/obsolete', {responseType: 'json'})
+    return axios.get(`${this.url}/fzp/obsolete`, {responseType: 'json'})
     .then((res) => {
       return res.data;
     });
@@ -50,7 +77,7 @@ class ApiClient {
    * @return {Promise} the fetch promise
    */
    getFzp(src) {
-     return axios.get(this.url+'/'+src, {responseType: 'xml'})
+     return axios.get(`${this.url}/${src}`, {responseType: 'xml'})
      .then((res) => {
        return res.data;
      });
@@ -62,23 +89,23 @@ class ApiClient {
     * @return {Promise} the fetch promise returns xml
     */
   getFzpCore(src) {
-    return axios.get(this.url+'/core/'+src, {responseType: 'xml'})
+    return axios.get(`${this.url}/core/${src}`, {responseType: 'xml'})
     .then((res) => {
       return res.data;
     });
   }
+
   /**
    * Get a single part fzp from the obsolete parts, this is for old sketches only!
    * @param  {String} src
    * @return {Promise} the fetch promise returns xml
    */
   getFzpObsolete(src) {
-    return axios.get(this.url+'/obsolete/'+src, {responseType: 'xml'})
+    return axios.get(`${this.url}/obsolete/${src}`, {responseType: 'xml'})
     .then((res) => {
       return res.data;
     });
   }
-
 
   /**
    * Get a single part svg and response the svg as a string
@@ -86,29 +113,31 @@ class ApiClient {
    * @return {Promise} the fetch promise
    */
    getSvg(src) {
-     return axios.get(this.url+'/svg/'+src, {responseType: 'xml'})
+     return axios.get(`${this.url}/svg/${src}`, {responseType: 'xml'})
      .then((res) => {
        return res.data;
      });
    }
+
    /**
     * Get a single part svg from the core parts as svg-string
     * @param  {String} src
     * @return {Promise} the fetch promise returns xml
     */
   getSvgCore(src) {
-    return axios.get(this.url+'/svg/core/'+src, {responseType: 'xml'})
+    return axios.get(`${this.url}/svg/core/${src}`, {responseType: 'xml'})
     .then((res) => {
       return res.data;
     });
   }
+
   /**
    * Get a single part svg from the obsolete svgs, this is for old-sketches only! the response is a svg-string
    * @param  {String} src
    * @return {Promise} the fetch promise
    */
   getSvgObsolete(src) {
-    return axios.get(this.url+'/svg/obsolete/'+src, {responseType: 'xml'})
+    return axios.get(`${this.url}/svg/obsolete/${src}`, {responseType: 'xml'})
     .then((res) => {
       return res.data;
     });
@@ -119,11 +148,14 @@ class ApiClient {
    * @return {Promise}
    */
   getFzbs() {
-    return axios.get(this.url+'/fzb', {responseType: 'json'})
+    return axios.get(`${this.url}/fzb`, {responseType: 'json'})
     .then((res) => {
       return res.data;
     });
   }
 }
 
-module.exports = ApiClient;
+module.exports = {
+  ApiClient,
+  FritzingPartsAPI,
+};
