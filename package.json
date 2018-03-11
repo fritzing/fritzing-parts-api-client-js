@@ -20,7 +20,7 @@
     "pretest": "make lint",
     "test": "make test",
     "precommit": "make lint",
-    "prepush": "make lint"
+    "prepush": "make lint && make test"
   },
   "homepage": "https://github.com/fritzing/fritzing-parts-api-client-js#readme",
   "repository": {
