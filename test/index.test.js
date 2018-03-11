@@ -58,7 +58,7 @@ describe('ApiClient getFzp', () => {
 
   test('Status 404', (done) => {
     FritzingPartsAPIClient.getFzp('not/found.fzp')
-    .then((data) => {
+    .then(() => {
       throw new Error('should be 404');
       done();
     })
@@ -83,7 +83,7 @@ describe('ApiClient getFzpCore', () => {
 
   test('Status 404', (done) => {
     FritzingPartsAPIClient.getFzpCore('not/found.fzp')
-    .then((data) => {
+    .then(() => {
       throw new Error('should be 404');
       done();
     })
@@ -108,7 +108,7 @@ describe('ApiClient getFzpObsolete', () => {
 
   test('Status 404', (done) => {
     FritzingPartsAPIClient.getFzpObsolete('not/found.fzp')
-    .then((data) => {
+    .then(() => {
       throw new Error('should be 404');
       done();
     })
@@ -134,7 +134,7 @@ describe('ApiClient getSvg', () => {
 
   test('Status 404', (done) => {
     FritzingPartsAPIClient.getSvg('not/found.svg')
-    .then((data) => {
+    .then(() => {
       throw new Error('should be 404');
       done();
     })
@@ -159,7 +159,7 @@ describe('ApiClient getSvgCore', () => {
 
   test('Status 404', (done) => {
     FritzingPartsAPIClient.getSvgCore('not/found.svg')
-    .then((data) => {
+    .then(() => {
       throw new Error('should be 404');
       done();
     })
@@ -184,7 +184,7 @@ describe('ApiClient getSvgObsolete', () => {
 
   test('Status 404', (done) => {
     FritzingPartsAPIClient.getSvgObsolete('not/found.svg')
-    .then((data) => {
+    .then(() => {
       throw new Error('should be 404');
       done();
     })

@@ -24,7 +24,7 @@ const FritzingPartsAPI = 'https://fritzing.github.io/fritzing-parts';
 const getFzps = function(url = `${FritzingPartsAPI}/fzp`) {
   return axios.get(url, {responseType: 'json'})
   .then((res) => {
-    return res.data;
+    return Promise.resolve(res.data);
   });
 };
 
@@ -37,7 +37,7 @@ const getFzps = function(url = `${FritzingPartsAPI}/fzp`) {
 const getFzpsCore = function(url = `${FritzingPartsAPI}/fzp/core`) {
   return axios.get(url, {responseType: 'json'})
   .then((res) => {
-    return res.data;
+    return Promise.resolve(res.data);
   });
 };
 
@@ -50,7 +50,7 @@ const getFzpsCore = function(url = `${FritzingPartsAPI}/fzp/core`) {
 const getFzpsObsolete = function(url = `${FritzingPartsAPI}/fzp/obsolete`) {
   return axios.get(url, {responseType: 'json'})
   .then((res) => {
-    return res.data;
+    return Promise.resolve(res.data);
   });
 };
 
@@ -64,7 +64,7 @@ const getFzpsObsolete = function(url = `${FritzingPartsAPI}/fzp/obsolete`) {
 const getFzp = function(src, url = FritzingPartsAPI) {
   return axios.get(`${url}/${src}`, {responseType: 'xml'})
   .then((res) => {
-    return res.data;
+    return Promise.resolve(res.data);
   });
 };
 
@@ -78,7 +78,7 @@ const getFzp = function(src, url = FritzingPartsAPI) {
 const getFzpCore = function(src, url = FritzingPartsAPI) {
   return axios.get(`${url}/core/${src}`, {responseType: 'xml'})
   .then((res) => {
-    return res.data;
+    return Promise.resolve(res.data);
   });
 };
 
@@ -92,7 +92,7 @@ const getFzpCore = function(src, url = FritzingPartsAPI) {
 const getFzpObsolete = function(src, url = FritzingPartsAPI) {
   return axios.get(`${url}/obsolete/${src}`, {responseType: 'xml'})
   .then((res) => {
-    return res.data;
+    return Promise.resolve(res.data);
   });
 };
 
@@ -106,7 +106,7 @@ const getFzpObsolete = function(src, url = FritzingPartsAPI) {
  const getSvg = function(src, url = FritzingPartsAPI) {
    return axios.get(`${url}/svg/${src}`, {responseType: 'xml'})
    .then((res) => {
-     return res.data;
+     return Promise.resolve(res.data);
    });
  };
 
@@ -120,7 +120,7 @@ const getFzpObsolete = function(src, url = FritzingPartsAPI) {
 const getSvgCore = function(src, url = FritzingPartsAPI) {
   return axios.get(`${url}/svg/core/${src}`, {responseType: 'xml'})
   .then((res) => {
-    return res.data;
+    return Promise.resolve(res.data);
   });
 };
 
@@ -134,7 +134,7 @@ const getSvgCore = function(src, url = FritzingPartsAPI) {
 const getSvgObsolete = function(src, url = FritzingPartsAPI) {
   return axios.get(`${url}/svg/obsolete/${src}`, {responseType: 'xml'})
   .then((res) => {
-    return res.data;
+    return Promise.resolve(res.data);
   });
 };
 
@@ -147,7 +147,7 @@ const getSvgObsolete = function(src, url = FritzingPartsAPI) {
 const getFzbs = function(url = `${FritzingPartsAPI}/fzb`) {
   return axios.get(url, {responseType: 'json'})
   .then((res) => {
-    return res.data;
+    return Promise.resolve(res.data);
   });
 };
 
