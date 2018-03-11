@@ -1,7 +1,8 @@
 {
   "extends": "google",
   "rules": {
-    "max-len": ["error", { "code": 120 }]
+    "max-len": ["error", { "code": 120 }],
+    "no-unused-vars": ["error", { "vars": "all", "args": "after-used", "ignoreRestSiblings": false }]
   },
   "parserOptions": {
     "ecmaVersion": 6,
