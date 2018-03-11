@@ -3,12 +3,12 @@
 <head>
   <meta charset="utf-8">
   <base data-ice="baseUrl" href="../../">
-  <title data-ice="title">src/index.js | fritzing-parts-api-client</title>
+  <title data-ice="title">src/index.js | fritzing-parts-api-client-js</title>
   <link type="text/css" rel="stylesheet" href="css/style.css">
   <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
   <script src="script/prettify/prettify.js"></script>
   <script src="script/manual.js"></script>
-<meta name="description" content="fritzing parts api client"><meta property="og:type" content="website"><meta property="og:url" content="https://paulvollmer.net"><meta property="og:site_name" content="fritzing-parts-api-client"><meta property="og:title" content="fritzing-parts-api-client"><meta property="og:image" content="https://github.com/paulvollmer/logo.png"><meta property="og:description" content="fritzing parts api client"><meta property="og:author" content="https://github.com/paulvollmer"><meta property="twitter:card" content="summary"><meta property="twitter:title" content="fritzing-parts-api-client"><meta property="twitter:description" content="fritzing parts api client"><meta property="twitter:image" content="https://github.com/paulvollmer/logo.png"></head>
+<meta name="description" content="fritzing parts javascript api client"><meta property="twitter:card" content="summary"><meta property="twitter:title" content="fritzing-parts-api-client-js"><meta property="twitter:description" content="fritzing parts javascript api client"></head>
 <body class="layout-container" data-ice="rootContainer">
 
 <header>
@@ -24,12 +24,23 @@
   </span>
     <ul class="search-result"></ul>
   </div>
-<a style="position:relative; top:3px;" href="https://github.com/paulvollmer/fritzing-parts-api-client"><img width="20px" src="./image/github.png"></a></header>
+<a style="position:relative; top:3px;" href="https://github.com/fritzing/fritzing-parts-api-client-js"><img width="20px" src="./image/github.png"></a></header>
 
 <nav class="navigation" data-ice="nav"><div>
   <ul>
     
-  <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/index.js~ApiClient.html">ApiClient</a></span></span></li>
+  <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-getFzbs">getFzbs</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-getFzp">getFzp</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-getFzpCore">getFzpCore</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-getFzpObsolete">getFzpObsolete</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-getFzps">getFzps</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-getFzpsCore">getFzpsCore</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-getFzpsObsolete">getFzpsObsolete</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-getSvg">getSvg</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-getSvgCore">getSvgCore</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-getSvgObsolete">getSvgObsolete</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-FritzingPartsAPI">FritzingPartsAPI</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-FritzingPartsAPIClient">FritzingPartsAPIClient</a></span></span></li>
 </ul>
 </div>
 </nav>
@@ -40,130 +51,186 @@
 const axios = require(&apos;axios&apos;);
 
 /**
- * Fritzing Parts API Client
+ * The base url of the fritzing parts api
+ *
+ * @example
+ * const {FritzingPartsAPI} = require(&apos;fritzing-parts-api-client-js&apos;)
+ *
+ * console.log(FritzingPartsAPI)
+ *
+ * @type {String}
  */
-class ApiClient {
-  /**
-   * Construct the ApiClient
-   */
-  constructor() {
-    this.url = &apos;https://fritzing.github.io/fritzing-parts&apos;;
-  }
+const FritzingPartsAPI = &apos;https://fritzing.github.io/fritzing-parts&apos;;
 
-  /**
-   * Get a list of all FZP files
-   * @return {Promise}
-   */
-  getFzps() {
-    return axios.get(this.url+&apos;/fzp&apos;, {responseType: &apos;json&apos;})
-    .then((res) =&gt; {
-      return res.data;
-    });
-  }
-  /**
-   * Get a list of all Core-FZP files
-   * @return {Promise}
-   */
-  getFzpsCore() {
-    return axios.get(this.url+&apos;/fzp/core&apos;, {responseType: &apos;json&apos;})
-    .then((res) =&gt; {
-      return res.data;
-    });
-  }
-  /**
-   * Get a list of all Obsolete-FZP files. for old sketches only!
-   * @return {Promise}
-   */
-  getFzpsObsolete() {
-    return axios.get(this.url+&apos;/fzp/obsolete&apos;, {responseType: &apos;json&apos;})
-    .then((res) =&gt; {
-      return res.data;
-    });
-  }
+/**
+ * Get a list of all FZP files
+ *
+ * @type   {Function}
+ * @param  {String} url - The base URL of the parts api
+ * @return {Promise}
+ */
+const getFzps = function(url = `${FritzingPartsAPI}/fzp`) {
+  return axios.get(url, {responseType: &apos;json&apos;})
+  .then((res) =&gt; {
+    return Promise.resolve(res.data);
+  });
+};
 
-  /**
-   * Get a single FZP and response the xml as a string
-   * @param  {String} src
-   * @return {Promise} the fetch promise
-   */
-   getFzp(src) {
-     return axios.get(this.url+&apos;/&apos;+src, {responseType: &apos;xml&apos;})
-     .then((res) =&gt; {
-       return res.data;
-     });
-   }
+/**
+ * Get a list of all Core-FZP files
+ *
+ * @param  {String} url - The base URL of the parts api
+ * @return {Promise}
+ */
+const getFzpsCore = function(url = `${FritzingPartsAPI}/fzp/core`) {
+  return axios.get(url, {responseType: &apos;json&apos;})
+  .then((res) =&gt; {
+    return Promise.resolve(res.data);
+  });
+};
 
-   /**
-    * Get a single part fzp from the core parts
-    * @param  {String} src
-    * @return {Promise} the fetch promise returns xml
-    */
-  getFzpCore(src) {
-    return axios.get(this.url+&apos;/core/&apos;+src, {responseType: &apos;xml&apos;})
-    .then((res) =&gt; {
-      return res.data;
-    });
-  }
-  /**
-   * Get a single part fzp from the obsolete parts, this is for old sketches only!
-   * @param  {String} src
-   * @return {Promise} the fetch promise returns xml
-   */
-  getFzpObsolete(src) {
-    return axios.get(this.url+&apos;/obsolete/&apos;+src, {responseType: &apos;xml&apos;})
-    .then((res) =&gt; {
-      return res.data;
-    });
-  }
+/**
+ * Get a list of all Obsolete-FZP files. for old sketches only!
+ *
+ * @param  {String} url - The base URL of the parts api
+ * @return {Promise}
+ */
+const getFzpsObsolete = function(url = `${FritzingPartsAPI}/fzp/obsolete`) {
+  return axios.get(url, {responseType: &apos;json&apos;})
+  .then((res) =&gt; {
+    return Promise.resolve(res.data);
+  });
+};
+
+/**
+ * Get a single FZP and response the xml as a string
+ *
+ * @param  {String} src
+ * @param  {String} url - The base URL of the parts api
+ * @return {Promise} the fetch promise
+ */
+const getFzp = function(src, url = FritzingPartsAPI) {
+  return axios.get(`${url}/${src}`, {responseType: &apos;xml&apos;})
+  .then((res) =&gt; {
+    return Promise.resolve(res.data);
+  });
+};
+
+ /**
+  * Get a single part fzp from the core parts
+  *
+  * @param  {String} src
+  * @param  {String} url - The base URL of the parts api
+  * @return {Promise} the fetch promise returns xml
+  */
+const getFzpCore = function(src, url = FritzingPartsAPI) {
+  return axios.get(`${url}/core/${src}`, {responseType: &apos;xml&apos;})
+  .then((res) =&gt; {
+    return Promise.resolve(res.data);
+  });
+};
+
+/**
+ * Get a single part fzp from the obsolete parts, this is for old sketches only!
+ *
+ * @param  {String} src
+ * @param  {String} url - The base URL of the parts api
+ * @return {Promise} the fetch promise returns xml
+ */
+const getFzpObsolete = function(src, url = FritzingPartsAPI) {
+  return axios.get(`${url}/obsolete/${src}`, {responseType: &apos;xml&apos;})
+  .then((res) =&gt; {
+    return Promise.resolve(res.data);
+  });
+};
+
+/**
+ * Get a single part svg and response the svg as a string
+ *
+ * @param  {String} src
+ * @param  {String} url - The base URL of the parts api
+ * @return {Promise} the fetch promise
+ */
+ const getSvg = function(src, url = FritzingPartsAPI) {
+   return axios.get(`${url}/svg/${src}`, {responseType: &apos;xml&apos;})
+   .then((res) =&gt; {
+     return Promise.resolve(res.data);
+   });
+ };
+
+ /**
+  * Get a single part svg from the core parts as svg-string
+  *
+  * @param  {String} src
+  * @param  {String} url - The base URL of the parts api
+  * @return {Promise} the fetch promise returns xml
+  */
+const getSvgCore = function(src, url = FritzingPartsAPI) {
+  return axios.get(`${url}/svg/core/${src}`, {responseType: &apos;xml&apos;})
+  .then((res) =&gt; {
+    return Promise.resolve(res.data);
+  });
+};
+
+/**
+ * Get a single part svg from the obsolete svgs, this is for old-sketches only! the response is a svg-string
+ *
+ * @param  {String} src
+ * @param  {String} url - The base URL of the parts api
+ * @return {Promise} the fetch promise
+ */
+const getSvgObsolete = function(src, url = FritzingPartsAPI) {
+  return axios.get(`${url}/svg/obsolete/${src}`, {responseType: &apos;xml&apos;})
+  .then((res) =&gt; {
+    return Promise.resolve(res.data);
+  });
+};
+
+/**
+ * Get a list of all FZB files
+ *
+ * @param  {String} url - The base URL of the parts api
+ * @return {Promise}
+ */
+const getFzbs = function(url = `${FritzingPartsAPI}/fzb`) {
+  return axios.get(url, {responseType: &apos;json&apos;})
+  .then((res) =&gt; {
+    return Promise.resolve(res.data);
+  });
+};
 
 
-  /**
-   * Get a single part svg and response the svg as a string
-   * @param  {String} src
-   * @return {Promise} the fetch promise
-   */
-   getSvg(src) {
-     return axios.get(this.url+&apos;/svg/&apos;+src, {responseType: &apos;xml&apos;})
-     .then((res) =&gt; {
-       return res.data;
-     });
-   }
-   /**
-    * Get a single part svg from the core parts as svg-string
-    * @param  {String} src
-    * @return {Promise} the fetch promise returns xml
-    */
-  getSvgCore(src) {
-    return axios.get(this.url+&apos;/svg/core/&apos;+src, {responseType: &apos;xml&apos;})
-    .then((res) =&gt; {
-      return res.data;
-    });
-  }
-  /**
-   * Get a single part svg from the obsolete svgs, this is for old-sketches only! the response is a svg-string
-   * @param  {String} src
-   * @return {Promise} the fetch promise
-   */
-  getSvgObsolete(src) {
-    return axios.get(this.url+&apos;/svg/obsolete/&apos;+src, {responseType: &apos;xml&apos;})
-    .then((res) =&gt; {
-      return res.data;
-    });
-  }
+/**
+* Fritzing Parts API Client
+*
+* @example
+* const {FritzingPartsAPIClient} = require(&apos;fritzing-parts-api-client-js&apos;)
+*
+* FritzingPartsAPIClient.getFzps()
+* .then((fzpz) =&gt; {
+*   console.log(fzps)
+* })
+* .catch((err) =&gt; {
+*   console.error(err)
+* })
+*/
+const FritzingPartsAPIClient = {
+  getFzps,
+  getFzpsCore,
+  getFzpsObsolete,
+  getFzp,
+  getFzpCore,
+  getFzpObsolete,
+  getSvg,
+  getSvgCore,
+  getSvgObsolete,
+  getFzbs,
+};
 
-  /**
-   * Get a list of all FZB files
-   * @return {Promise}
-   */
-  getFzbs() {
-    return axios.get(this.url+&apos;/fzb&apos;, {responseType: &apos;json&apos;})
-    .then((res) =&gt; {
-      return res.data;
-    });
-  }
-}
-
-module.exports = ApiClient;
+module.exports = {
+  FritzingPartsAPI,
+  FritzingPartsAPIClient,
+};
 </code></pre>
 
 </div>

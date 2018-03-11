@@ -3,12 +3,12 @@
 <head>
   <meta charset="utf-8">
   <base data-ice="baseUrl">
-  <title data-ice="title">Home | fritzing-parts-api-client</title>
+  <title data-ice="title">Home | fritzing-parts-api-client-js</title>
   <link type="text/css" rel="stylesheet" href="css/style.css">
   <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
   <script src="script/prettify/prettify.js"></script>
   <script src="script/manual.js"></script>
-<meta name="description" content="fritzing parts api client"><meta property="og:type" content="website"><meta property="og:url" content="https://paulvollmer.net"><meta property="og:site_name" content="fritzing-parts-api-client"><meta property="og:title" content="fritzing-parts-api-client"><meta property="og:image" content="https://github.com/paulvollmer/logo.png"><meta property="og:description" content="fritzing parts api client"><meta property="og:author" content="https://github.com/paulvollmer"><meta property="twitter:card" content="summary"><meta property="twitter:title" content="fritzing-parts-api-client"><meta property="twitter:description" content="fritzing parts api client"><meta property="twitter:image" content="https://github.com/paulvollmer/logo.png"></head>
+<meta name="description" content="fritzing parts javascript api client"><meta property="twitter:card" content="summary"><meta property="twitter:title" content="fritzing-parts-api-client-js"><meta property="twitter:description" content="fritzing parts javascript api client"></head>
 <body class="layout-container" data-ice="rootContainer">
 
 <header>
@@ -24,17 +24,28 @@
   </span>
     <ul class="search-result"></ul>
   </div>
-<a style="position:relative; top:3px;" href="https://github.com/paulvollmer/fritzing-parts-api-client"><img width="20px" src="./image/github.png"></a></header>
+<a style="position:relative; top:3px;" href="https://github.com/fritzing/fritzing-parts-api-client-js"><img width="20px" src="./image/github.png"></a></header>
 
 <nav class="navigation" data-ice="nav"><div>
   <ul>
     
-  <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/index.js~ApiClient.html">ApiClient</a></span></span></li>
+  <li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-getFzbs">getFzbs</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-getFzp">getFzp</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-getFzpCore">getFzpCore</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-getFzpObsolete">getFzpObsolete</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-getFzps">getFzps</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-getFzpsCore">getFzpsCore</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-getFzpsObsolete">getFzpsObsolete</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-getSvg">getSvg</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-getSvgCore">getSvgCore</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-getSvgObsolete">getSvgObsolete</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-FritzingPartsAPI">FritzingPartsAPI</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-FritzingPartsAPIClient">FritzingPartsAPIClient</a></span></span></li>
 </ul>
 </div>
 </nav>
 
-<div class="content" data-ice="content"><div data-ice="index" class="github-markdown"><h1 id="fritzing-parts-api-client-js--a-href--https---fritzing-github-io-fritzing-parts-api-client-js----img-src--https---fritzing-github-io-fritzing-parts-api-client-js-badge-svg--alt------a-">fritzing-parts-api-client-js <a href="https://fritzing.github.io/fritzing-parts-api-client-js/"><img src="https://fritzing.github.io/fritzing-parts-api-client-js/badge.svg" alt=""></a></h1><p>This is a super simple <a href="https://nodejs.org">nodejs</a> Api-Client. It connects to the <a href="fritzing.github.io/fritzing-parts">fritzing-parts-server</a> and fetches <a href="http://fritzing.org/home/">fritzing</a> parts.  </p>
+<div class="content" data-ice="content"><div data-ice="index" class="github-markdown"><h1 id="fritzing-parts-api-client-js--a-href--https---travis-ci-org-fritzing-fritzing-parts-api-client-js---img-src--https---travis-ci-org-fritzing-fritzing-parts-api-client-js-svg-branch-master--alt--build-status----a---a-href--https---fritzing-github-io-fritzing-parts-api-client-js----img-src--https---fritzing-github-io-fritzing-parts-api-client-js-badge-svg--alt------a-">fritzing-parts-api-client-js <a href="https://travis-ci.org/fritzing/fritzing-parts-api-client-js"><img src="https://travis-ci.org/fritzing/fritzing-parts-api-client-js.svg?branch=master" alt="Build Status"></a> <a href="https://fritzing.github.io/fritzing-parts-api-client-js/"><img src="https://fritzing.github.io/fritzing-parts-api-client-js/badge.svg" alt=""></a></h1><p>This is a super simple <a href="https://nodejs.org">nodejs</a> Api-Client. It connects to the <a href="fritzing.github.io/fritzing-parts">fritzing-parts-server</a> and fetches <a href="http://fritzing.org/home/">fritzing</a> parts.  </p>
 <h2 id="file-structure">File Structure</h2><ul>
 <li><code>docs</code> generated esdoc artifact</li>
 <li><code>lib</code> generated babel artifact</li>
@@ -48,13 +59,14 @@
 <pre><code class="lang-sh"><code class="source-code prettyprint">npm install fritzing/fritzing-parts-api-client-js --save</code>
 </code></pre>
 <h2 id="usage">Usage</h2><p>initialize an api client and fetch /fzps endpoint</p>
-<pre><code class="lang-javascript"><code class="source-code prettyprint">import ApiClient from &apos;fritzing-parts-api-client-js&apos;
+<pre><code class="lang-javascript"><code class="source-code prettyprint">import {FritzingPartsAPIClient} from &apos;fritzing-parts-api-client-js&apos;
 
-const apiclient = new ApiClient()
-apiclient.getFzps().then(data =&gt; {
-  // do something with the data
-}).catch(err =&gt; {
-  // do something with the error catch
+FritzingPartsAPIClient.getFzps()
+.then((fzpz) =&gt; {
+  console.log(fzps)
+})
+.catch((err) =&gt; {
+  console.error(err)
 })</code>
 </code></pre>
 <h2 id="api-documentation">Api Documentation</h2><p>The complete Api Documentation can be found here:
