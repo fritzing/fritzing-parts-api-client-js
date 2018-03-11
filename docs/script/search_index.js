@@ -1,163 +1,229 @@
 window.esdocSearchIndex = [
   [
-    "fritzing-parts-api-client-js/src/index.js~apiclient",
-    "class/src/index.js~ApiClient.html",
-    "<span>ApiClient</span> <span class=\"search-result-import-path\">fritzing-parts-api-client-js/src/index.js</span>",
-    "class"
+    "fritzing-parts-api-client-js/src/index.js~fritzingpartsapi",
+    "variable/index.html#static-variable-FritzingPartsAPI",
+    "<span>FritzingPartsAPI</span> <span class=\"search-result-import-path\">fritzing-parts-api-client-js/src/index.js</span>",
+    "variable"
+  ],
+  [
+    "fritzing-parts-api-client-js/src/index.js~fritzingpartsapiclient",
+    "variable/index.html#static-variable-FritzingPartsAPIClient",
+    "<span>FritzingPartsAPIClient</span> <span class=\"search-result-import-path\">fritzing-parts-api-client-js/src/index.js</span>",
+    "variable"
+  ],
+  [
+    "fritzing-parts-api-client-js/src/index.js~getfzbs",
+    "function/index.html#static-function-getFzbs",
+    "<span>getFzbs</span> <span class=\"search-result-import-path\">fritzing-parts-api-client-js/src/index.js</span>",
+    "function"
+  ],
+  [
+    "fritzing-parts-api-client-js/src/index.js~getfzp",
+    "function/index.html#static-function-getFzp",
+    "<span>getFzp</span> <span class=\"search-result-import-path\">fritzing-parts-api-client-js/src/index.js</span>",
+    "function"
+  ],
+  [
+    "fritzing-parts-api-client-js/src/index.js~getfzpcore",
+    "function/index.html#static-function-getFzpCore",
+    "<span>getFzpCore</span> <span class=\"search-result-import-path\">fritzing-parts-api-client-js/src/index.js</span>",
+    "function"
+  ],
+  [
+    "fritzing-parts-api-client-js/src/index.js~getfzpobsolete",
+    "function/index.html#static-function-getFzpObsolete",
+    "<span>getFzpObsolete</span> <span class=\"search-result-import-path\">fritzing-parts-api-client-js/src/index.js</span>",
+    "function"
+  ],
+  [
+    "fritzing-parts-api-client-js/src/index.js~getfzps",
+    "function/index.html#static-function-getFzps",
+    "<span>getFzps</span> <span class=\"search-result-import-path\">fritzing-parts-api-client-js/src/index.js</span>",
+    "function"
+  ],
+  [
+    "fritzing-parts-api-client-js/src/index.js~getfzpscore",
+    "function/index.html#static-function-getFzpsCore",
+    "<span>getFzpsCore</span> <span class=\"search-result-import-path\">fritzing-parts-api-client-js/src/index.js</span>",
+    "function"
+  ],
+  [
+    "fritzing-parts-api-client-js/src/index.js~getfzpsobsolete",
+    "function/index.html#static-function-getFzpsObsolete",
+    "<span>getFzpsObsolete</span> <span class=\"search-result-import-path\">fritzing-parts-api-client-js/src/index.js</span>",
+    "function"
+  ],
+  [
+    "fritzing-parts-api-client-js/src/index.js~getsvg",
+    "function/index.html#static-function-getSvg",
+    "<span>getSvg</span> <span class=\"search-result-import-path\">fritzing-parts-api-client-js/src/index.js</span>",
+    "function"
+  ],
+  [
+    "fritzing-parts-api-client-js/src/index.js~getsvgcore",
+    "function/index.html#static-function-getSvgCore",
+    "<span>getSvgCore</span> <span class=\"search-result-import-path\">fritzing-parts-api-client-js/src/index.js</span>",
+    "function"
+  ],
+  [
+    "fritzing-parts-api-client-js/src/index.js~getsvgobsolete",
+    "function/index.html#static-function-getSvgObsolete",
+    "<span>getSvgObsolete</span> <span class=\"search-result-import-path\">fritzing-parts-api-client-js/src/index.js</span>",
+    "function"
   ],
   [
     "",
-    "test-file/test/index.test.js.html#lineNumber201",
+    "test-file/test/index.test.js.html#lineNumber200",
     "ApiClient getFzbs",
     "test"
   ],
   [
     "",
-    "test-file/test/index.test.js.html#lineNumber202",
+    "test-file/test/index.test.js.html#lineNumber201",
     "ApiClient getFzbs Status 200",
     "test"
   ],
   [
     "",
-    "test-file/test/index.test.js.html#lineNumber48",
+    "test-file/test/index.test.js.html#lineNumber47",
     "ApiClient getFzp",
     "test"
   ],
   [
     "",
-    "test-file/test/index.test.js.html#lineNumber49",
+    "test-file/test/index.test.js.html#lineNumber48",
     "ApiClient getFzp Status 200",
     "test"
   ],
   [
     "",
-    "test-file/test/index.test.js.html#lineNumber60",
+    "test-file/test/index.test.js.html#lineNumber59",
     "ApiClient getFzp Status 404",
     "test"
   ],
   [
     "",
-    "test-file/test/index.test.js.html#lineNumber73",
+    "test-file/test/index.test.js.html#lineNumber72",
     "ApiClient getFzpCore",
     "test"
   ],
   [
     "",
-    "test-file/test/index.test.js.html#lineNumber74",
+    "test-file/test/index.test.js.html#lineNumber73",
     "ApiClient getFzpCore Status 200",
     "test"
   ],
   [
     "",
-    "test-file/test/index.test.js.html#lineNumber85",
+    "test-file/test/index.test.js.html#lineNumber84",
     "ApiClient getFzpCore Status 404",
     "test"
   ],
   [
     "",
-    "test-file/test/index.test.js.html#lineNumber98",
+    "test-file/test/index.test.js.html#lineNumber97",
     "ApiClient getFzpObsolete",
     "test"
   ],
   [
     "",
-    "test-file/test/index.test.js.html#lineNumber99",
+    "test-file/test/index.test.js.html#lineNumber98",
     "ApiClient getFzpObsolete Status 200",
     "test"
   ],
   [
     "",
-    "test-file/test/index.test.js.html#lineNumber110",
+    "test-file/test/index.test.js.html#lineNumber109",
     "ApiClient getFzpObsolete Status 404",
     "test"
   ],
   [
     "",
-    "test-file/test/index.test.js.html#lineNumber7",
+    "test-file/test/index.test.js.html#lineNumber6",
     "ApiClient getFzps",
     "test"
   ],
   [
     "",
-    "test-file/test/index.test.js.html#lineNumber8",
+    "test-file/test/index.test.js.html#lineNumber7",
     "ApiClient getFzps Status 200",
     "test"
   ],
   [
     "",
-    "test-file/test/index.test.js.html#lineNumber20",
+    "test-file/test/index.test.js.html#lineNumber19",
     "ApiClient getFzpsCore",
     "test"
   ],
   [
     "",
-    "test-file/test/index.test.js.html#lineNumber21",
+    "test-file/test/index.test.js.html#lineNumber20",
     "ApiClient getFzpsCore Status 200",
     "test"
   ],
   [
     "",
-    "test-file/test/index.test.js.html#lineNumber33",
+    "test-file/test/index.test.js.html#lineNumber32",
     "ApiClient getFzpsObsolete",
     "test"
   ],
   [
     "",
-    "test-file/test/index.test.js.html#lineNumber34",
+    "test-file/test/index.test.js.html#lineNumber33",
     "ApiClient getFzpsObsolete Status 200",
     "test"
   ],
   [
     "",
-    "test-file/test/index.test.js.html#lineNumber124",
+    "test-file/test/index.test.js.html#lineNumber123",
     "ApiClient getSvg",
     "test"
   ],
   [
     "",
-    "test-file/test/index.test.js.html#lineNumber125",
+    "test-file/test/index.test.js.html#lineNumber124",
     "ApiClient getSvg Status 200",
     "test"
   ],
   [
     "",
-    "test-file/test/index.test.js.html#lineNumber136",
+    "test-file/test/index.test.js.html#lineNumber135",
     "ApiClient getSvg Status 404",
     "test"
   ],
   [
     "",
-    "test-file/test/index.test.js.html#lineNumber149",
+    "test-file/test/index.test.js.html#lineNumber148",
     "ApiClient getSvgCore",
     "test"
   ],
   [
     "",
-    "test-file/test/index.test.js.html#lineNumber150",
+    "test-file/test/index.test.js.html#lineNumber149",
     "ApiClient getSvgCore Status 200",
     "test"
   ],
   [
     "",
-    "test-file/test/index.test.js.html#lineNumber161",
+    "test-file/test/index.test.js.html#lineNumber160",
     "ApiClient getSvgCore Status 404",
     "test"
   ],
   [
     "",
-    "test-file/test/index.test.js.html#lineNumber174",
+    "test-file/test/index.test.js.html#lineNumber173",
     "ApiClient getSvgObsolete",
     "test"
   ],
   [
     "",
-    "test-file/test/index.test.js.html#lineNumber175",
+    "test-file/test/index.test.js.html#lineNumber174",
     "ApiClient getSvgObsolete Status 200",
     "test"
   ],
   [
     "",
-    "test-file/test/index.test.js.html#lineNumber186",
+    "test-file/test/index.test.js.html#lineNumber185",
     "ApiClient getSvgObsolete Status 404",
     "test"
   ],
@@ -448,72 +514,6 @@ window.esdocSearchIndex = [
     "file/src/index.js.html",
     "src/index.js",
     "file"
-  ],
-  [
-    "src/index.js~apiclient#constructor",
-    "class/src/index.js~ApiClient.html#instance-constructor-constructor",
-    "src/index.js~ApiClient#constructor",
-    "method"
-  ],
-  [
-    "src/index.js~apiclient#getfzbs",
-    "class/src/index.js~ApiClient.html#instance-method-getFzbs",
-    "src/index.js~ApiClient#getFzbs",
-    "method"
-  ],
-  [
-    "src/index.js~apiclient#getfzp",
-    "class/src/index.js~ApiClient.html#instance-method-getFzp",
-    "src/index.js~ApiClient#getFzp",
-    "method"
-  ],
-  [
-    "src/index.js~apiclient#getfzpcore",
-    "class/src/index.js~ApiClient.html#instance-method-getFzpCore",
-    "src/index.js~ApiClient#getFzpCore",
-    "method"
-  ],
-  [
-    "src/index.js~apiclient#getfzpobsolete",
-    "class/src/index.js~ApiClient.html#instance-method-getFzpObsolete",
-    "src/index.js~ApiClient#getFzpObsolete",
-    "method"
-  ],
-  [
-    "src/index.js~apiclient#getfzps",
-    "class/src/index.js~ApiClient.html#instance-method-getFzps",
-    "src/index.js~ApiClient#getFzps",
-    "method"
-  ],
-  [
-    "src/index.js~apiclient#getfzpscore",
-    "class/src/index.js~ApiClient.html#instance-method-getFzpsCore",
-    "src/index.js~ApiClient#getFzpsCore",
-    "method"
-  ],
-  [
-    "src/index.js~apiclient#getfzpsobsolete",
-    "class/src/index.js~ApiClient.html#instance-method-getFzpsObsolete",
-    "src/index.js~ApiClient#getFzpsObsolete",
-    "method"
-  ],
-  [
-    "src/index.js~apiclient#getsvg",
-    "class/src/index.js~ApiClient.html#instance-method-getSvg",
-    "src/index.js~ApiClient#getSvg",
-    "method"
-  ],
-  [
-    "src/index.js~apiclient#getsvgcore",
-    "class/src/index.js~ApiClient.html#instance-method-getSvgCore",
-    "src/index.js~ApiClient#getSvgCore",
-    "method"
-  ],
-  [
-    "src/index.js~apiclient#getsvgobsolete",
-    "class/src/index.js~ApiClient.html#instance-method-getSvgObsolete",
-    "src/index.js~ApiClient#getSvgObsolete",
-    "method"
   ],
   [
     "test/index.test.js",
