@@ -1,6 +1,6 @@
 {
   "name": "fritzing-parts-api-client-js",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "fritzing-parts api client for frontend side",
   "contributors": [
     {
