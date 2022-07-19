@@ -1,3 +1,5 @@
+This API is unmaintained and as far as we know, not used by anybody. See issue https://github.com/fritzing/fritzing-parts-api-client-js/issues/19
+
 # fritzing-parts-api-client-js [![Build Status](https://travis-ci.org/fritzing/fritzing-parts-api-client-js.svg?branch=master)](https://travis-ci.org/fritzing/fritzing-parts-api-client-js) [![](https://fritzing.github.io/fritzing-parts-api-client-js/badge.svg)](https://fritzing.github.io/fritzing-parts-api-client-js/)
 
 This is a simple javascript/nodejs api client that connects to the [fritzing](http://fritzing.org/home/) parts data at https://fritzing.github.io/fritzing-parts. The api client support functions to fetch fzb, fzp and svg files.
